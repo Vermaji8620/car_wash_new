@@ -1,4 +1,5 @@
 import CarBack from "../assets/Car_back.png";
+import Star from "../assets/star.png";
 import grp6 from "../assets/Group 6.png";
 import grp1 from "../assets/Group 1.png";
 import imgrem from "../assets/image-removebg-preview (9) 1.png";
@@ -284,7 +285,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="w-[45%] ml-16 flex translate-x-16 gap-16">
+        <div className="w-[50%] ml-16 flex translate-x-10 gap-16">
           <div className="w-[167px] justify-center items-center rounded-[10px] flex flex-col h-[64px] bg-[#74B9FF]">
             <p className="font-[600] text-[20px] leading-[30px] text-white">
               3 Million +
@@ -293,25 +294,30 @@ const HomePage = () => {
           </div>
           <div className="w-[167px] justify-center items-center rounded-[10px] flex flex-col h-[64px] bg-[#74B9FF]">
             <p className="font-[600] text-[20px] leading-[30px] text-white">
-              3 Million +
+              2.7 Million +
+            </p>
+            <p className="font-[600] text-[13px] leading-[20px]">
+              Happy Customers
+            </p>
+          </div>
+          <div className="w-[167px] justify-center items-center rounded-[10px] flex flex-col h-[64px] bg-[#74B9FF]">
+            <p className="font-[600] text-[20px] flex gap-3 items-center leading-[30px] text-white">
+              4.7 <img src={Star} alt="" />
             </p>
             <p className="font-[600] text-[13px] leading-[20px]">Cars served</p>
           </div>
           <div className="w-[167px] justify-center items-center rounded-[10px] flex flex-col h-[64px] bg-[#74B9FF]">
             <p className="font-[600] text-[20px] leading-[30px] text-white">
-              3 Million +
+              850 +
             </p>
-            <p className="font-[600] text-[13px] leading-[20px]">Cars served</p>
-          </div>
-          <div className="w-[167px] justify-center items-center rounded-[10px] flex flex-col h-[64px] bg-[#74B9FF]">
-            <p className="font-[600] text-[20px] leading-[30px] text-white">
-              3 Million +
+            <p className="font-[600] text-[13px] leading-[20px]">
+              Touch Points
             </p>
-            <p className="font-[600] text-[13px] leading-[20px]">Cars served</p>
           </div>
         </div>
       </div>
       {/* *********************** */}
+
     </div>
   );
 };
