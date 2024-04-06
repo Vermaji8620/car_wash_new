@@ -144,12 +144,15 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-
         <div className="w-[50%] relative justify-between gap-3 ml-14 flex flex-wrap">
           <div className="w-[330px] m-2 h-[326px] relative overflow-hidden">
             <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
             <img src={srect} alt="" className="absolute z-20 -left-4 top-6" />
-            <img src={trect} alt="" className="absolute z-30 -left-12 top-12" />
+            <img
+              src={trect}
+              alt=""
+              className="absolute  z-30 -left-12 top-12"
+            />
           </div>
           <div className="w-[330px] m-2 h-[326px] relative overflow-hidden">
             <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
@@ -165,6 +168,38 @@ const HomePage = () => {
             <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
             <img src={srect} alt="" className="absolute z-20 -left-4 top-6" />
             <img src={trect} alt="" className="absolute z-30 -left-12 top-12" />
+          </div>
+        </div>
+      </div>
+      {/* ************************ */}
+      <div className="fourth_section pt-10 pl-5">
+        <div className="w-[50%] gap-5 flex">
+          <div className="w-[46px]">
+            <img src={Rect} alt="" />
+          </div>
+          <div className="flex gap-3 flex-col">
+            <div className=" w-[914px] h-[50px] font-[600] font-poppins text-[40px] overflow-hidden leading-[50px] ">
+              GoMechanic Guarantee
+            </div>
+            <div className="font-poppins font-[400] w-[784px] h-[81px] text-[18px] leading-[27px] text-[#6B6B6B]">
+              Lorem Ipsum s simply dummy text of the printing and typesetting
+              industry.orem Ipsum has been the industry standard dummy Lorem
+              Ipsum isimply dummy.
+            </div>
+          </div>
+        </div>
+        <div className="w-1/2 ml-16 flex items-center justify-between gap-4 flex-wrap">
+          <div className="w-[40%] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+            Free PickUp Drop
+          </div>
+          <div className="w-[40%] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+            Genuine Parts
+          </div>
+          <div className="w-[40%] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+            30 Days Warranty
+          </div>
+          <div className="w-[40%] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+            Affordable Prices
           </div>
         </div>
       </div>
