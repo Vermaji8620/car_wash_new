@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       {/* ******************* */}
-      <div className="first_section h-12"></div>
+      {/* <div className="first_section h-12"></div> */}
       {/* **************** */}
       <BrowserRouter>
         <Header />
