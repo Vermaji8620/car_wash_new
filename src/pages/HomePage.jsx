@@ -25,6 +25,10 @@ import time from "../assets/time.png";
 import phone from "../assets/phone.png";
 import gplay from "../assets/gplay.png";
 import india from "../assets/india.png";
+import fimage from "../assets/fimage.png";
+import simage from "../assets/simage.png";
+import timage from "../assets/timage.png";
+import foimage from "../assets/foimage.png";
 import simpline from "../assets/simpline.png";
 import applay from "../assets/appplay.png";
 // import Card from "../components/Card";
@@ -204,7 +208,7 @@ const HomePage = () => {
             <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
             <img src={srect} alt="" className="absolute z-20 -left-4 top-6" />
             <img
-              src={trect}
+              src={fimage}
               alt=""
               className="absolute  z-30 -left-12 top-12"
             />
@@ -212,17 +216,29 @@ const HomePage = () => {
           <div className="w-[330px] m-2 h-[326px] relative overflow-hidden">
             <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
             <img src={srect} alt="" className="absolute z-20 -left-4 top-6" />
-            <img src={trect} alt="" className="absolute z-30 -left-12 top-12" />
+            <img
+              src={simage}
+              alt=""
+              className="absolute z-30 -left-12 top-12"
+            />
           </div>
           <div className="w-[330px] m-2 h-[326px] relative overflow-hidden">
             <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
             <img src={srect} alt="" className="absolute z-20 -left-4 top-6" />
-            <img src={trect} alt="" className="absolute z-30 -left-12 top-12" />
+            <img
+              src={timage}
+              alt=""
+              className="absolute z-30 -left-12 top-12"
+            />
           </div>
           <div className="w-[330px] m-2 h-[326px] relative overflow-hidden">
             <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
             <img src={srect} alt="" className="absolute z-20 -left-4 top-6" />
-            <img src={trect} alt="" className="absolute z-30 -left-12 top-12" />
+            <img
+              src={foimage}
+              alt=""
+              className="absolute z-30 -left-12 top-12"
+            />
           </div>
         </div>
       </div>
@@ -683,6 +699,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      {/* *********************** */}
     </div>
   );
 };
