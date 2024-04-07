@@ -2,7 +2,7 @@ import { useState } from "react";
 import uparow from "../assets/uparow.png";
 
 const CardsCompo = ({ title, desc }) => {
-  const [disp, setDisp] = useState("inline-block");
+  const [disp, setDisp] = useState("hidden");
   const dispornot = () => {
     setDisp(disp === "hidden" ? "inline-block" : "hidden");
   };
