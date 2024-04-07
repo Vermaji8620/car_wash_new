@@ -11,7 +11,6 @@ import bike from "../assets/bike.png";
 import frect from "../assets/f_rect.png";
 import srect from "../assets/s_rect.png";
 import line from "../assets/line.png";
-import trect from "../assets/t_rect.png";
 import circle from "../assets/circle.png";
 import bg_logo from "../assets/logo_bg.png";
 import blue from "../assets/blueline.png";
@@ -31,7 +30,7 @@ import timage from "../assets/timage.png";
 import foimage from "../assets/foimage.png";
 import simpline from "../assets/simpline.png";
 import applay from "../assets/appplay.png";
-// import Card from "../components/Card";
+import Card from "../components/Card";
 
 const HomePage = () => {
   const arr = [
@@ -73,9 +72,8 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="border-[3px]  border-green-500">
-      {/* ************* */}
-      {/* <Card /> */}
+    <div className="">
+      <Card />
       {/* ****************** */}
       <div className="first_section">
         <img src={CarBack} className="w-[1749px] h-[1278px]" alt="" />
@@ -122,7 +120,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <div className="w-[78%] ml-14 justify-between gap-16 flex flex-wrap">
+          <div className="w-[86%] ml-10 justify-between gap-8 flex flex-wrap">
             <div className="border-[1px] border-black shadow-lg relative m-4 w-[180px] h-[180px] flex flex-col justify-end rounded-[10px]">
               <img src={grp6} className="absolute top-0 left-0" alt="" />
               <img src={imgrem} alt="" />
@@ -521,9 +519,9 @@ const HomePage = () => {
         </div>
       </div>
       {/* *********************** */}
-      <div className="nineth_section bg-black pb-28 text-white pt-12 mt-24 justify-around gap-4 flex pl-20">
-        <div className=" flex flex-col gap-5">
-          <div className="font-[700] text-[16px] leading-[24px] ">ABOUT US</div>
+      <div className="nineth_section z-50 bg-black pb-28 text-white pt-12 mt-24 justify-around gap-4 flex pl-20">
+        <div className="flex flex-col gap-5">
+          <div className="font-[700] text-[16px] leading-[24px]">ABOUT US</div>
           <div className="lowercase">
             <span className="uppercase font-[500] text-[15px] leading-[23px]">
               FAQs
@@ -604,7 +602,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* ************************* */}
-      <div className="tenth_section bg-[#1A1A1A] items-center text-white pb-16 justify-around gap-8 flex flex-col pl-5">
+      <div className="tenth_section z-50 bg-[#1A1A1A] items-center text-white pb-16 justify-around gap-8 flex flex-col pl-5">
         <img src={bg_logo} className="w-[232px] h-[116px]" alt="" />
         <div className="w-[978px] h-[87px] text-center">
           <p className="font-[400] text-[19px] text-center w-full leading-[29px]">
