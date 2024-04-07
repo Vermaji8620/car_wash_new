@@ -39,7 +39,7 @@ const Card = () => {
           </div>
         </div>
         <div className="w-[400px] h-[68px] rounded-[10px] bg-[#74B9FF] items-center flex justify-center">
-          <div className="w-[235px] h-[30px] ">
+          <div className="w-[235px] h-[30px] flex items-center">
             <p className="text-white font-poppins font-[600] text-[19px] leading-[28.5px]">
               CHECK PRICES FOR FREE
             </p>
