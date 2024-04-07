@@ -15,3 +15,11 @@
   height: 10vh;
   background: url("./assets/shade_on_header.png");
 }
+
+.element-causing-scrollbar {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

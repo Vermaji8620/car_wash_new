@@ -1,10 +1,12 @@
+// Card.jsx
 import smallcar from "../assets/smallcar.png";
 import star from "../assets/starr.png";
 import telephone from "../assets/telephone.png";
+
 const Card = () => {
   return (
-    <div className="absolute right-12 overflow-hidden border-[6px] rounded-[20px] border-[#74B9FF] top-96 p-8 bg-[#ffffff] w-[500px] h-[700px] ">
-      <div className="mx-auto gap-8 flex flex-col">
+    <div className="sticky top-36 z-20 bg-white rounded-[20px] -mt-[630px] border-[6px] border-[#74B9FF] p-8 w-[500px] ml-[990px] ">
+      <div className="mx-auto gap-3 flex flex-col">
         <div className="w-[402px] h-[114px]">
           <p className="font-poppins font-[700] text-[37px] leading-[55.5px]">
             Experience The Best Car Services In Surat
@@ -16,12 +18,8 @@ const Card = () => {
           </p>
         </div>
         <div className="flex w-[400px] items-center rounded-[10px] border-[#000000] border-[1px] h-[67px]">
-          <img src={smallcar} alt="" className="w-[46px] h-[46px] " />
-          <select
-            name=""
-            id=""
-            className="border-none flex w-[235px] h-[30px] "
-          >
+          <img src={smallcar} alt="" className="w-[46px] h-[46px]" />
+          <select name="" id="" className="border-none flex w-[235px] h-[30px]">
             <option
               value="Maruti Suzuki Swift, CNG"
               className="font-[400] text-[19px] leading-[28.5] text-[#424242]"
