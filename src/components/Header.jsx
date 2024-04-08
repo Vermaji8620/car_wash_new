@@ -4,7 +4,7 @@ import frame from "../assets/Frame.png";
 const Header = () => {
   return (
     // <div className="absolute z-10">
-    <div className="flex absolute z-50 justify-around items-center w-[1257px] h-[88px] bg-[#74B9FF] rounded-[50px] mt-6 ml-32">
+    <div className="sm:flex hidden absolute z-50 justify-around items-center w-[1257px] h-[76px] overflow-hidden bg-[#74B9FF] rounded-[50px] mt-6 ml-32">
       <Link to={"/"}>
         <img
           className="w-[232px] h-[88px]"

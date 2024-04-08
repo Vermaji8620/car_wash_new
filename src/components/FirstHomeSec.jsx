@@ -3,7 +3,7 @@ const FirstSec = () => {
   return (
     <div>
       <div className="bg-backimage first_section">
-        <img src={CarBack} className="w-[1749px] h-[1278px]" alt="" />
+        <img src={CarBack} className="md:w-[1749px] md:h-[1278px]" alt="" />
       </div>
     </div>
   );

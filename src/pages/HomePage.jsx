@@ -14,7 +14,7 @@ import TenthHomeSec from "../components/TenthHomeSec";
 const HomePage = () => {
   return (
     <div className="w-full h-full ">
-      <div className="relative h-[110vh] element-causing-scrollbar">
+      <div className="sm:relative sm:h-[110vh] element-causing-scrollbar">
         <Card />
         <FirstHomeSec />
         <SecondHomeSec />

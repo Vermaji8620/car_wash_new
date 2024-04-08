@@ -5,19 +5,19 @@ import telephone from "../assets/telephone.png";
 
 const Card = () => {
   return (
-    <div className="sticky top-36 z-20 bg-white rounded-[20px] -mt-[630px] border-[6px] border-[#74B9FF] p-8 w-[500px] ml-[990px] ">
+    <div className="sm:sticky relative sm:top-56 top-[63rem] z-20 bg-white rounded-[20px] -mt-[630px] border-[6px] border-[#74B9FF] p-8 sm:w-[500px] sm:ml-[980px] ">
       <div className="mx-auto gap-3 flex flex-col">
         <div className="w-[402px] h-[114px]">
-          <p className="font-poppins font-[700] text-[37px] leading-[55.5px]">
+          <p className="font-poppins font-[700] sm:text-[37px] text-[25px] leading-[55.5px]">
             Experience The Best Car Services In Surat
           </p>
         </div>
-        <div className="w-[396px] h-[87px]">
+        <div className="sm:w-[396px] h-[87px]">
           <p className="font-poppins font-[400] text-[30px] leading-[43.5px] text-[#424242]">
             Get Instant Quotes for Your Car Service
           </p>
         </div>
-        <div className="flex w-[400px] items-center rounded-[10px] border-[#000000] border-[1px] h-[67px]">
+        <div className="flex sm:w-[400px] items-center rounded-[10px] border-[#000000] border-[1px] h-[67px]">
           <img src={smallcar} alt="" className="w-[46px] h-[46px]" />
           <select name="" id="" className="border-none flex w-[235px] h-[30px]">
             <option
@@ -28,7 +28,7 @@ const Card = () => {
             </option>
           </select>
         </div>
-        <div className="border-[#000000] items-center pl-4 gap-3 w-[400px] h-[67px] rounded-[10px] flex border-[1px]">
+        <div className="border-[#000000] items-center pl-4 gap-3 sm:w-[400px] h-[67px] rounded-[10px] flex border-[1px]">
           <img src={telephone} alt="" className="w-[30px] h-[30px]" />
           <div className="w-[118px] h-[30px]">
             <p className="font-poppins font-[400] text-[19px] leading-[28.5px] ">
@@ -36,7 +36,7 @@ const Card = () => {
             </p>
           </div>
         </div>
-        <div className="w-[400px] h-[68px] rounded-[10px] bg-[#74B9FF] items-center flex justify-center">
+        <div className="sm:w-[400px] h-[68px] rounded-[10px] bg-[#74B9FF] items-center flex justify-center">
           <div className="w-[235px] h-[30px] flex items-center">
             <p className="text-white font-poppins font-[600] text-[19px] leading-[28.5px]">
               CHECK PRICES FOR FREE
