@@ -1,7 +1,7 @@
 
 const NinethHome = () => {
   return (
-    <div className="nineth_section z-50 bg-black pb-28 text-white pt-12 mt-24 justify-around gap-4 flex pl-20">
+    <div className="sm:flex-row flex-col nineth_section z-50 bg-black pb-28 text-white pt-12 mt-24 justify-around gap-4 flex pl-20">
       <div className="flex flex-col gap-5">
         <div className="font-[700] text-[16px] leading-[24px]">ABOUT US</div>
         <div className="lowercase">

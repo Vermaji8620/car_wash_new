@@ -5,24 +5,28 @@ import Rect from "../assets/Rectangle 192.png";
 
 const SixthHomeSec = () => {
   return (
-    <div className="sixth_section pt-24 gap-16 flex flex-col pl-5">
-      <div className="w-[50%] gap-5 flex">
-        <div className="w-[46px]">
-          <img src={Rect} alt="" />
+    <div className="sixth_section sm:pt-24 gap-16 flex flex-col pl-5">
+      <div className="sm:w-[50%] sm:gap-5 gap-3 flex">
+        <div className="sm:w-[46px] relative sm:top-0 top-4 w-[96px]">
+          <img src={Rect} className="h-32" alt="" />
         </div>
         <div className="flex gap-3 flex-col">
-          <div className=" w-[914px] h-[50px] font-[600] font-poppins text-[40px] overflow-hidden leading-[50px] ">
-            What Car Owners in Bangalore Say
+          <div className="sm:w-[914px] flex flex-col">
+            <p className="font-[600] text-[40px] overflow-hidden leading-[50px] font-poppins">
+              What Car Owners in Bangalore Say
+            </p>
           </div>
-          <div className="font-poppins font-[400] w-[784px] h-[81px] text-[18px] leading-[27px] text-[#6B6B6B]">
-            Lorem Ipsum s simply dummy text of the printing and typesetting
-            industry.orem Ipsum has been the industry standard dummy Lorem Ipsum
-            isimply dummy.
+          <div className=" sm:w-[784px] h-[81px]">
+            <p className="font-poppins font-[400] text-[18px] leading-[27px] text-[#6B6B6B]">
+              Lorem Ipsum s simply dummy text of the printing and typesetting
+              industry.orem Ipsum has been the industry standard dummy Lorem
+              Ipsum isimply dummy.
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="bg-carback w-[950px] flex flex-col justify-evenly gap-8 items-center relative overflow-y-hidden  h-[756px] opacity-[1] bg-no-repeat bg-cover">
+      <div className="bg-carback sm:w-[950px] flex flex-col sm:-ml-0 -ml-2 justify-evenly gap-8 items-center relative overflow-y-hidden sm:h-[756px] h-[600px] w-[350px] opacity-[1] bg-no-repeat bg-cover">
         <img src={backrect} className="w-full absolute z-10" alt="" />
         <img
           src={coma}
@@ -45,16 +49,16 @@ const SixthHomeSec = () => {
 
         <div className="flex mt-32 text-white z-30 items-center  justify-between w-[90%] mx-auto">
           <div className="w-[40px] h-[40px] rounded-full border-[3px] border-white">
-            <p className="translate-x-3 translate-y-1">&lt;</p>
+            <p className="translate-x-2 sm:translate-x-3 translate-y-1">&lt;</p>
           </div>
-          <div className="w-[405px] flex flex-col justify-center h-[92px]">
+          <div className="w-[405px] flex flex-col justify-center sm:h-[92px]">
             <p className="font-[600] text-center text-[15px] leading-[22px]">
               Lorem Ipsums simply dummy text of the typesetting industry. Lorem
               Ipsum has been s standard dummy Lorem Ipsums simpdummy.
             </p>
           </div>
           <div className="w-[40px] h-[40px] rounded-full border-[3px] border-white">
-            <p className="translate-x-3 translate-y-1">&gt;</p>
+            <p className="sm:translate-x-3 translate-x-2 translate-y-1">&gt;</p>
           </div>
         </div>
 

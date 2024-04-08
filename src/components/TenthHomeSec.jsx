@@ -10,18 +10,18 @@ const TenthHomeSec = () => {
   return (
     <div className="tenth_section z-50 bg-[#1A1A1A] items-center text-white pb-16 justify-around gap-8 flex flex-col pl-5">
       <img src={bg_logo} className="w-[232px] h-[116px]" alt="" />
-      <div className="w-[978px] h-[87px] text-center">
+      <div className="sm:w-[978px] sm:h-[87px] sm:-ml-0 -ml-5 text-center">
         <p className="font-[400] text-[19px] text-center w-full leading-[29px]">
           Lorem Ipsum is simply dummy text of the printingand typesetting
           industry. Lorem Ipsum has been the industrys standard dummy Lorem
           Ipsum is simply <br /> dummy.
         </p>
       </div>
-      <div className="flex items-center w-[80%] justify-end -mt-20">
+      <div className="flex sm:flex-row flex-col items-center w-[80%] justify-end -mt-20 sm:pt-0 pt-16">
         <img src={gplay} alt="" />
         <img src={applay} className="w-[194px] h-[61px]" alt="" />
       </div>
-      <div className="flex justify-around gap-7 items-center w-[80%]">
+      <div className="flex sm:flex-row flex-col justify-around gap-7 items-center w-[80%]">
         <div className="flex flex-col gap-8">
           <img src={call} className="translate-x-9 w-[47px] h-[47px]" alt="" />
           <div className="w-[169px] h-[56px]">
