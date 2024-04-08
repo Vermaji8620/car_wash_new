@@ -9,22 +9,22 @@ import foimage from "../assets/foimage.png";
 const ThirdHomeSec = () => {
   return (
     <div className="third_section pt-10 pl-5">
-      <div className="w-[50%] gap-5 flex">
-        <div className="w-[46px]">
+      <div className="overflow-hidden sm:w-[50%] w-full gap-5 flex">
+        <div className="sm:w-[46px] w-[96px] sm:top-0 relative top-4">
           <img src={Rect} alt="" />
         </div>
-        <div className="flex gap-3 flex-col">
-          <div className=" w-[914px] h-[50px] font-[600] font-poppins text-[40px] overflow-hidden leading-[50px] ">
+        <div className="flex justify-center gap-3 flex-col">
+          <div className="sm:w-[914px] h-[50px] font-[600] font-poppins sm:text-[40px] text-[30px] overflow-hidden leading-[50px] ">
             Trending Near You
           </div>
-          <div className="font-poppins font-[400] w-[784px] h-[81px] text-[18px] leading-[27px] text-[#6B6B6B]">
+          <div className="font-poppins font-[400] sm:w-[784px] w-[90%] h-[81px] text-[18px] leading-[27px] text-[#6B6B6B]">
             Lorem Ipsum s simply dummy text of the printing and typesetting
-            industry.orem Ipsum has been the industry standard dummy Lorem Ipsum
-            isimply dummy.
+            isiy. Lorem Ipsum s simply dummy text of the printing and
+            typesetting isiy.
           </div>
         </div>
       </div>
-      <div className="w-[50%] relative justify-between gap-3 ml-14 flex flex-wrap">
+      <div className="sm:w-[50%] relative justify-between gap-3 sm:ml-14 flex flex-wrap">
         <div className="w-[330px] m-2 h-[326px] relative overflow-hidden">
           <img src={frect} alt="" className="absolute z-10 left-2 top-2" />
           <img src={srect} alt="" className="absolute z-20 -left-4 top-6" />
