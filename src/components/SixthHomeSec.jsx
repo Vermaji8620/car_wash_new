@@ -82,7 +82,7 @@ const SixthHomeSec = () => {
         </div>
       </div>
 
-      <div className="flex h-[300px] overflow-x-auto -mt-9 flex-nowrap">
+      <div className="sm:hidden flex h-[300px] overflow-x-auto -mt-9 flex-nowrap">
             <div className="w-[100vw] flex-none ">
               <div className="overflow-hidden flex-none -mt-2 translate-x-6">
                 <img
