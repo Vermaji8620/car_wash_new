@@ -1,10 +1,41 @@
+import { useState } from "react";
 
 const NinethHome = () => {
+  const [dispornot, setDispornot] = useState({
+    first: "hidden",
+    second: "hidden",
+    third: "hidden",
+    fourth: "hidden",
+    fifth: "hidden",
+  });
+  const [upordown, setUpordown] = useState("rotate-90");
+  const setdispfunc = (e) => {
+    const classNamee = e.target.className.split(" ")[3];
+    setDispornot((prevState) => {
+      const newState = Object.keys(prevState).reduce((acc, key) => {
+        acc[key] = "hidden";
+        return acc;
+      }, {});
+      setUpordown(upordown === "rotate-0" ? "rotate-180" : "rotate-0");
+      newState[classNamee] =
+        prevState[classNamee] === "hidden" ? "inline-block" : "hidden";
+
+      return newState;
+    });
+  };
   return (
-    <div className="sm:flex-row flex-col nineth_section z-50 bg-black pb-28 text-white pt-12 mt-24 justify-around gap-4 flex pl-20">
+    <div className="sm:flex-row flex-col nineth_section z-50 bg-black pb-14 text-white pt-12 sm:mt-24 mt-6 justify-around gap-4 flex sm:pl-20 pl-5">
       <div className="flex flex-col gap-5">
-        <div className="font-[700] text-[16px] leading-[24px]">ABOUT US</div>
-        <div className="lowercase">
+        <div className="flex justify-between font-[700] text-[16px] leading-[24px]">
+          <p>ABOUT US</p>
+          <p
+            className={`mr-10 sm:hidden ${upordown} first`}
+            onClick={setdispfunc}
+          >
+            &gt;
+          </p>
+        </div>
+        <div className={`sm:inline-block ${dispornot.first}`}>
           <span className="uppercase font-[500] text-[15px] leading-[23px]">
             FAQs
           </span>
@@ -20,10 +51,16 @@ const NinethHome = () => {
         </div>
       </div>
       <div className=" flex flex-col gap-5">
-        <div className="font-[700] text-[16px] leading-[24px] ">
+        <div className="flex justify-between font-[700] text-[16px] leading-[24px] ">
           OUR SERVICES
+          <p
+            className={`mr-10 sm:hidden ${upordown} second`}
+            onClick={setdispfunc}
+          >
+            &gt;
+          </p>
         </div>
-        <div>
+        <div className={`sm:inline-block ${dispornot.second}`}>
           Scheduled Services <br />
           AC Services <br />
           Cleaning & Detailling <br /> Lights & Fitments <br />
@@ -34,10 +71,16 @@ const NinethHome = () => {
         </div>
       </div>
       <div className=" flex flex-col gap-5">
-        <div className="font-[700] text-[16px] leading-[24px]">
+        <div className="flex justify-between font-[700] text-[16px] leading-[24px]">
           LUXURY BRANDS
+          <p
+            className={`mr-10 sm:hidden ${upordown} third`}
+            onClick={setdispfunc}
+          >
+            &gt;
+          </p>
         </div>
-        <div>
+        <div className={`sm:inline-block ${dispornot.third}`}>
           Mercedes
           <br />
           BMW <br />
@@ -52,10 +95,16 @@ const NinethHome = () => {
         </div>
       </div>
       <div className=" flex flex-col gap-5">
-        <div className="font-[700] text-[16px] leading-[24px] ">
+        <div className="flex justify-between font-[700] text-[16px] leading-[24px] ">
           POPULAR BRANDS
+          <p
+            className={`mr-10 sm:hidden ${upordown} fourth`}
+            onClick={setdispfunc}
+          >
+            &gt;
+          </p>
         </div>
-        <div>
+        <div className={`sm:inline-block ${dispornot.fourth}`}>
           Maruti Suzuki <br />
           Hyundai <br />
           Honda <br />
@@ -71,10 +120,16 @@ const NinethHome = () => {
         </div>
       </div>
       <div className=" flex flex-col gap-5">
-        <div className="font-[700] text-[16px] leading-[24px] ">
+        <div className=" flex justify-between font-[700] text-[16px] leading-[24px] ">
           POPULAR AREAS NEAR YOU
+          <p
+            className={`mr-10 sm:hidden ${upordown} fifth`}
+            onClick={setdispfunc}
+          >
+            &gt;
+          </p>
         </div>
-        <div>
+        <div className={`sm:inline-block ${dispornot.fifth}`}>
           Garafe near me in Electronic City <br />
           Garafe near me in Electronic Whitefield <br />
           Garafe near me in Electronic Indiranagar <br />
