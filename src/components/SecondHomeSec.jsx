@@ -48,11 +48,11 @@ const SecondHomeSec = () => {
           <div className="sm:w-[46px] w-[96px] relative sm:top-4">
             <img src={Rect} alt="" />
           </div>
-          <div className="flex sm:gap-3 flex-col">
+          <div className="flex sm:gap-3 sm:-mt-0 -mt-3 flex-col">
             <div className="w-[914px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[16px] overflow-hidden leading-[50px] ">
-              Car Services Available In Surat
+              Car Services available in Surat
             </div>
-            <div className="font-poppins font-[400] sm:w-[704px] w-[15rem] sm:h-[81px] h-full gap-1 sm:text-[18px] sm:leading-[27px] text-[#6B6B6B] justify-end flex flex-col">
+            <div className="font-poppins font-[400] sm:w-[704px] w-[18rem] sm:h-[81px] h-full gap-1 sm:text-[18px] sm:leading-[27px] leading-[20px] text-[#6B6B6B] justify-start pt-3 flex flex-col">
               Lorem Ipsum s simply dummy text of the printing and typesetting
               industry.
               <span className="sm:inline-block hidden">
