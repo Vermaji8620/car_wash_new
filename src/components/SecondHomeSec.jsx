@@ -2,7 +2,7 @@ import grp6 from "../assets/Group 6.png";
 import grp1 from "../assets/Group 1.png";
 import imgrem from "../assets/image-removebg-preview (9) 1.png";
 import bike from "../assets/bike.png";
-import circle from "../assets/circle.png";
+// import circle from "../assets/circle.png";
 import whitecar from "../assets/whitecar.png";
 import whitecake from "../assets/whitecake.png";
 import blue from "../assets/blueline.png";
@@ -11,9 +11,9 @@ import sofa from "../assets/sofa.png";
 
 const SecondHomeSec = () => {
   return (
-    <div className="second_section sm:mt-0 mt-[700px] pt-10 pl-5">
-      <div className="sm:w-[60%] w-[95%] relative gap-6 flex flex-col">
-        <div className="absolute top-8 -left-2">
+    <div className="second_section sm:mt-0 mt-[530px] pt-10 pl-5">
+      <div className="sm:w-[60%] w-[95%] sm:h-full relative gap-6 flex flex-col">
+        {/* <div className="absolute top-8 -left-2">
           <img src={circle} alt="" />
           <p className="text-3xl translate-x-3 -translate-y-9 overflow-hidden">
             &lt;
@@ -24,18 +24,26 @@ const SecondHomeSec = () => {
           <p className="text-3xl -translate-y-9 translate-x-2 overflow-hidden">
             &gt;
           </p>
-        </div>
-        <div className="w-[100%] flex shadow-lg justify-around p-7 rounded-[10px] border-[1px] font-[600] text-[13px] leading-[20px] font-poppins border-[#74B9FF] gap-5">
-          <div className="flex items-center flex-col gap-1">
-            <p>Our Services</p>
-            <p>
-              <img src={blue} alt="" />
-            </p>
+        </div> */}
+        <div className="w-[100%] flex overflow-x-auto shadow-lg justify-around sm:p-7 p-4 rounded-[10px] border-[1px] font-[600] text-[13px] leading-[20px] font-poppins border-[#74B9FF] gap-5">
+          <div className="flex items-center flex-none flex-col gap-1">
+            <div>
+              <p>Our Services</p>
+              <p>
+                <img src={blue} alt="" />
+              </p>
+            </div>
           </div>
-          <p>Curated Custom Services</p>
-          <p>Winter Services</p>
-          <p>How GoMechanic Works</p>
-          <p>Rating</p>
+          <p className="flex items-center flex-col gap-1 flex-none">
+            Curated Custom Services
+          </p>
+          <p className="flex items-center flex-col gap-1 flex-none">
+            Winter Services
+          </p>
+          <p className="flex items-center flex-col gap-1 flex-none">
+            How GoMechanic Works
+          </p>
+          <p className="flex items-center flex-col gap-1 flex-none">Rating</p>
         </div>
         <div className="w-[85%] gap-5 flex">
           <div className="sm:w-[46px] w-[96px] sm:top-0 relative top-4">
