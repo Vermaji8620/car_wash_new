@@ -18,18 +18,18 @@ const FourthHomeSec = () => {
       </div>
       <div className="sm:w-1/2 sm:ml-16 mr-3 flex items-center justify-between gap-4 sm:flex-wrap flex-col sm:flex-row">
         <div className="flex w-full">
-          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] sm:text-[23px] leading-[35px] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] text-[12px] sm:text-[23px] leading-[35px] sm:h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
             Free PickUp Drop
           </div>
-          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] sm:text-[23px] leading-[35px] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] text-[12px] sm:text-[23px] leading-[35px] sm:h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
             Genuine Parts
           </div>
         </div>
         <div className="flex w-full">
-          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] sm:text-[23px] leading-[35px] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] text-[12px] sm:text-[23px] leading-[35px] sm:h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
             30 Days Warranty
           </div>
-          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] sm:text-[23px] leading-[35px] h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
+          <div className="w-[45%] mx-auto text-[#74B9FF] font-[600] text-[12px] sm:text-[23px] leading-[35px] sm:h-[64px] text-center rounded-[10px] flex items-center justify-center bg-[#F5FAFF] border-[1px] border-[#74B9FF]">
             Affordable Prices
           </div>
         </div>
