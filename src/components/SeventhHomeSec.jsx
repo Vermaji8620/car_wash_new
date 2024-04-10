@@ -40,7 +40,8 @@ const SeventhHomeSec = () => {
     },
   ];
   return (
-    <div className="seventh_section pt-24 gap-4 flex flex-col pl-5">
+    <div className="seventh_section sm:pt-24 -mt-10 gap-4 flex flex-col pl-5">
+
       <div className="sm:w-[85%] sm:gap-3 gap-1 overflow-hidden flex">
         <div className="sm:w-[46px] w-[96px] relative sm:top-4">
           <img src={Rect} alt=""  className="sm:h-full h-[70px]"/>
@@ -51,6 +52,7 @@ const SeventhHomeSec = () => {
           </div>
         </div>
       </div>
+
       {arr.map((eachelem, index) => (
         <div key={index}>
           <CardsCompo title={eachelem.title} desc={eachelem.desc} />

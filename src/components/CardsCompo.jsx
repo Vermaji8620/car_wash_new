@@ -1,5 +1,5 @@
 import { useState } from "react";
-import uparow from "../assets/uparow.png";
+import { BiSolidDownArrow } from "react-icons/bi";
 
 const CardsCompo = ({ title, desc }) => {
   const [disp, setDisp] = useState("hidden");
@@ -12,17 +12,20 @@ const CardsCompo = ({ title, desc }) => {
         <p className="font-poppins font-[600] sm:text-[18px] text-[15px] sm:leading-[27px]">
           {title}
         </p>
-        <img
-          src={uparow}
-          alt=""
+
+        <BiSolidDownArrow
           onClick={dispornot}
           className={`${
-            disp === "hidden" ? "rotate-[180deg]" : "rotate-[0deg]"
+            disp === "hidden" ? "rotate-[0deg]" : "rotate-[180deg]"
           }`}
         />
       </div>
       <hr />
-      <p className={`text-[#6B6B6B] w-[90%] mx-auto sm:pl-0 pl-4 text-[15px] ${disp}`}>{desc}</p>
+      <p
+        className={`text-[#6B6B6B] w-[90%] mx-auto sm:pl-0 pl-4 text-[15px] ${disp}`}
+      >
+        {desc}
+      </p>
     </div>
   );
 };

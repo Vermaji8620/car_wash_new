@@ -1,3 +1,4 @@
+import allstars from "../assets/allstars.png";
 import coma from "../assets/coma.png";
 import bluerect from "../assets/bluerect.png";
 import person from "../assets/person.png";
@@ -12,7 +13,7 @@ const SixthHomeSec = () => {
     <div className="sixth_section relative overflow-y-hidden sm:pt-24 sm:-mt-0 -mt-24 gap-8 flex flex-col pl-5">
       <div className="sm:w-[85%] sm:gap-3 gap-1 overflow-hidden flex">
         <div className="sm:w-[46px] w-[96px] relative sm:top-4">
-          <img src={Rect} alt=""  className="sm:h-full h-[70px]"/>
+          <img src={Rect} alt="" className="sm:h-full h-[70px]" />
         </div>
         <div className="flex sm:mt-10 -mt-1 items-center">
           <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-hidden leading-[28px]">
@@ -78,15 +79,15 @@ const SixthHomeSec = () => {
         </div>
       </div>
 
-      <div className="sm:hidden flex h-[300px] overflow-x-auto -mt-9 flex-nowrap">
-        <div className="w-[100vw] flex-none ">
-          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+      <div className="sm:hidden flex h-[400px] gap-4 overflow-x-auto -mt-6 flex-nowrap">
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
               src={person1}
-              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
               alt=""
             />
-            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
               <img src={bluerect} className="w-[80%] " alt="" />
               <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
                 <p className="text-[20px] text-center relative right-10 ">
@@ -95,23 +96,28 @@ const SixthHomeSec = () => {
                 <p className="text-[10px]  text-center relative right-10">
                   CEO of IT Company
                 </p>
-                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                <p className="text-[10px] text-center relative w-[70%]">
                   “ Lorem Ipsumsimply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industrys standard dummy
                   text ever since the 1500s”
                 </p>
               </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
             </div>
           </div>
         </div>
-        <div className="w-[100vw] flex-none ">
-          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
               src={person1}
-              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
               alt=""
             />
-            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
               <img src={bluerect} className="w-[80%] " alt="" />
               <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
                 <p className="text-[20px] text-center relative right-10 ">
@@ -120,23 +126,28 @@ const SixthHomeSec = () => {
                 <p className="text-[10px]  text-center relative right-10">
                   CEO of IT Company
                 </p>
-                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                <p className="text-[10px] text-center relative w-[70%]">
                   “ Lorem Ipsumsimply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industrys standard dummy
                   text ever since the 1500s”
                 </p>
               </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
             </div>
           </div>
         </div>
-        <div className="w-[100vw] flex-none ">
-          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
               src={person1}
-              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
               alt=""
             />
-            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
               <img src={bluerect} className="w-[80%] " alt="" />
               <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
                 <p className="text-[20px] text-center relative right-10 ">
@@ -145,23 +156,28 @@ const SixthHomeSec = () => {
                 <p className="text-[10px]  text-center relative right-10">
                   CEO of IT Company
                 </p>
-                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                <p className="text-[10px] text-center relative w-[70%]">
                   “ Lorem Ipsumsimply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industrys standard dummy
                   text ever since the 1500s”
                 </p>
               </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
             </div>
           </div>
         </div>
-        <div className="w-[100vw] flex-none ">
-          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
               src={person1}
-              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
               alt=""
             />
-            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
               <img src={bluerect} className="w-[80%] " alt="" />
               <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
                 <p className="text-[20px] text-center relative right-10 ">
@@ -170,23 +186,28 @@ const SixthHomeSec = () => {
                 <p className="text-[10px]  text-center relative right-10">
                   CEO of IT Company
                 </p>
-                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                <p className="text-[10px] text-center relative w-[70%]">
                   “ Lorem Ipsumsimply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industrys standard dummy
                   text ever since the 1500s”
                 </p>
               </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
             </div>
           </div>
         </div>
-        <div className="w-[100vw] flex-none ">
-          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
               src={person1}
-              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
               alt=""
             />
-            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
               <img src={bluerect} className="w-[80%] " alt="" />
               <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
                 <p className="text-[20px] text-center relative right-10 ">
@@ -195,12 +216,107 @@ const SixthHomeSec = () => {
                 <p className="text-[10px]  text-center relative right-10">
                   CEO of IT Company
                 </p>
-                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                <p className="text-[10px] text-center relative w-[70%]">
                   “ Lorem Ipsumsimply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industrys standard dummy
                   text ever since the 1500s”
                 </p>
               </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
+              </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
+              </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div className="relative flex-none">
+          <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-80 border-[3px] border-white left-[80px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden overflow-hidden w-full h-full relative left-8">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
+              </div>
+              <img
+                src={allstars}
+                className="absolute top-[210px] z-30 h-[30px] "
+                alt=""
+              />
             </div>
           </div>
         </div>
