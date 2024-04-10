@@ -44,11 +44,11 @@ const SecondHomeSec = () => {
           </p>
           <p className="flex items-center flex-col gap-1 flex-none">Rating</p>
         </div>
-        <div className="w-[85%] gap-5 flex">
+        <div className="w-[85%] overflow-hidden gap-5 flex">
           <div className="sm:w-[46px] w-[96px] relative sm:top-4">
             <img src={Rect} alt="" />
           </div>
-          <div className="flex sm:gap-3 sm:-mt-0 -mt-3 flex-col">
+          <div className="flex  sm:gap-3 sm:-mt-0 -mt-3 flex-col">
             <div className="w-[914px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[16px] overflow-hidden leading-[50px] ">
               Car Services available in Surat
             </div>

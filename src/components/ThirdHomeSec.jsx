@@ -9,7 +9,7 @@ import foimage from "../assets/foimage.png";
 const ThirdHomeSec = () => {
   return (
     <div className="third_section pt-10 pl-5">
-      <div className="w-[85%] gap-5 flex">
+      <div className="w-[85%] overflow-hidden gap-5 flex">
         <div className="sm:w-[46px] w-[96px] relative sm:top-4">
           <img src={Rect} alt="" />
         </div>
@@ -21,8 +21,7 @@ const ThirdHomeSec = () => {
             Lorem Ipsum s simply dummy text of the printing and typesetting
             industry.
             <span className="sm:inline-block hidden">
-              orem Ipsum has been the industry standard dummy Lorem Ipsum
-              isimply dummy.
+              orem Ipsum has been the industry standard dummy
             </span>
           </div>
         </div>

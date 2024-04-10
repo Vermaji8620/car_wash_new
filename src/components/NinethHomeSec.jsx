@@ -8,31 +8,58 @@ const NinethHome = () => {
     fourth: "hidden",
     fifth: "hidden",
   });
-  const [upordown, setUpordown] = useState("rotate-90");
+
+  const [upordown, setUpordown] = useState({
+    first: "rotate-180",
+    second: "rotate-180",
+    third: "rotate-180",
+    fourth: "rotate-180",
+    fifth: "rotate-180",
+  });
   const setdispfunc = (e) => {
+    // Object.keys(prevState) gets an array of the keys from the prevState object.
+
+    // .reduce((acc, key) => { ... }, {}) is called on this array. The reduce method takes a reducer function and an initial value as arguments. In this case, the initial value is an empty object {}.
+
+    // The reducer function takes an accumulator acc and the current value key as arguments. The accumulator is the value returned by the previous execution of the reducer function, or the initial value if it's the first execution.
+
+    // Inside the reducer function, acc[key] = "hidden"; sets the property with the name key in the acc object to the string "hidden".
+
+    // return acc; returns the acc object, which will be used as the accumulator in the next execution of the reducer function.
     const classNamee = e.target.className.split(" ")[3];
     setDispornot((prevState) => {
       const newState = Object.keys(prevState).reduce((acc, key) => {
         acc[key] = "hidden";
         return acc;
       }, {});
-      setUpordown(upordown === "rotate-0" ? "rotate-180" : "rotate-0");
       newState[classNamee] =
         prevState[classNamee] === "hidden" ? "inline-block" : "hidden";
-
       return newState;
     });
+    setUpordown((prevSetUporDown) => {
+      // acc will initially be an object that is going to store the initial value of the object that is being passed into it , which in this case is (nothing inside an object).
+
+      const newUporDown = Object.keys(prevSetUporDown).reduce((acc, key) => {
+        acc[key] = "rotate-180";
+        return acc;
+      }, {});
+
+      newUporDown[classNamee] =
+        upordown[classNamee] === "rotate-0" ? "rotate-180" : "rotate-0";
+      return newUporDown;
+    });
   };
+
   return (
     <div className="sm:flex-row flex-col nineth_section z-50 bg-black pb-14 text-white pt-12 sm:mt-24 mt-6 justify-around gap-4 flex sm:pl-20 pl-5">
       <div className="flex flex-col gap-5">
         <div className="flex justify-between font-[700] text-[16px] leading-[24px]">
           <p>ABOUT US</p>
           <p
-            className={`mr-10 sm:hidden ${upordown} first`}
+            className={`mr-10 sm:hidden ${upordown.first} first`}
             onClick={setdispfunc}
           >
-            &gt;
+            ^
           </p>
         </div>
         <div className={`sm:inline-block ${dispornot.first}`}>
@@ -54,10 +81,10 @@ const NinethHome = () => {
         <div className="flex justify-between font-[700] text-[16px] leading-[24px] ">
           OUR SERVICES
           <p
-            className={`mr-10 sm:hidden ${upordown} second`}
+            className={`mr-10 sm:hidden ${upordown.second} second`}
             onClick={setdispfunc}
           >
-            &gt;
+            ^
           </p>
         </div>
         <div className={`sm:inline-block ${dispornot.second}`}>
@@ -74,10 +101,10 @@ const NinethHome = () => {
         <div className="flex justify-between font-[700] text-[16px] leading-[24px]">
           LUXURY BRANDS
           <p
-            className={`mr-10 sm:hidden ${upordown} third`}
+            className={`mr-10 sm:hidden ${upordown.third} third`}
             onClick={setdispfunc}
           >
-            &gt;
+            ^
           </p>
         </div>
         <div className={`sm:inline-block ${dispornot.third}`}>
@@ -98,10 +125,10 @@ const NinethHome = () => {
         <div className="flex justify-between font-[700] text-[16px] leading-[24px] ">
           POPULAR BRANDS
           <p
-            className={`mr-10 sm:hidden ${upordown} fourth`}
+            className={`mr-10 sm:hidden ${upordown.fourth} fourth`}
             onClick={setdispfunc}
           >
-            &gt;
+            ^
           </p>
         </div>
         <div className={`sm:inline-block ${dispornot.fourth}`}>
@@ -123,10 +150,10 @@ const NinethHome = () => {
         <div className=" flex justify-between font-[700] text-[16px] leading-[24px] ">
           POPULAR AREAS NEAR YOU
           <p
-            className={`mr-10 sm:hidden ${upordown} fifth`}
+            className={`mr-10 sm:hidden ${upordown.fifth} fifth`}
             onClick={setdispfunc}
           >
-            &gt;
+            ^
           </p>
         </div>
         <div className={`sm:inline-block ${dispornot.fifth}`}>
