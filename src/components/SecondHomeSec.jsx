@@ -44,24 +44,16 @@ const SecondHomeSec = () => {
           </p>
           <p className="flex items-center flex-col gap-1 flex-none">Rating</p>
         </div>
-        <div className="w-[85%] overflow-hidden gap-5 flex">
-          <div className="sm:w-[46px] w-[96px] relative sm:top-4">
-            <img src={Rect} alt="" />
-          </div>
-          <div className="flex  sm:gap-3 sm:-mt-0 -mt-3 flex-col">
-            <div className="w-[914px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[16px] overflow-hidden leading-[50px] ">
-              Car Services available in Surat
-            </div>
-            <div className="font-poppins font-[400] sm:w-[704px] w-[18rem] sm:h-[81px] h-full gap-1 sm:text-[18px] sm:leading-[27px] leading-[20px] text-[#6B6B6B] justify-start pt-3 flex flex-col">
-              Lorem Ipsum s simply dummy text of the printing and typesetting
-              industry.
-              <span className="sm:inline-block hidden">
-                orem Ipsum has been the industry standard dummy Lorem Ipsum
-                isimply dummy.
-              </span>
-            </div>
+        <div className="sm:w-[85%] sm:gap-3 gap-1 overflow-hidden flex">
+        <div className="sm:w-[46px] w-[96px] relative sm:top-4">
+          <img src={Rect} alt=""  className="sm:h-full h-[70px]"/>
+        </div>
+        <div className="flex sm:mt-10 -mt-1 items-center">
+          <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-hidden leading-[28px]">
+            Car Services available in Surat
           </div>
         </div>
+      </div>
         <div className="ml-10 justify-between gap-8 flex sm:-translate-x-0 -translate-x-5 flex-wrap">
           <div className="flex sm:gap-20 gap-3">
             <div className="sm:shadow-lg  relative sm:m-4 sm:w-[180px] sm:h-[180px] h-full flex flex-col justify-end rounded-[10px]">

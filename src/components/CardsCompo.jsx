@@ -9,7 +9,7 @@ const CardsCompo = ({ title, desc }) => {
   return (
     <div className="sm:w-[890px] rounded-[10px] shadow-lg bg-[#F3F9FF] gap-4 sm:translate-x-14 -translate-x-4 flex flex-col">
       <div className="flex items-center sm:w-[90%] w-[90%] justify-between mx-auto pt-4 sm:pl-0 pl-4">
-        <p className="font-poppins font-[600] sm:text-[18px] text-[10px] sm:leading-[27px]">
+        <p className="font-poppins font-[600] sm:text-[18px] text-[15px] sm:leading-[27px]">
           {title}
         </p>
         <img
@@ -22,7 +22,7 @@ const CardsCompo = ({ title, desc }) => {
         />
       </div>
       <hr />
-      <p className={`text-[#6B6B6B] w-[90%] mx-auto sm:pl-0 pl-4 text-[10px] ${disp}`}>{desc}</p>
+      <p className={`text-[#6B6B6B] w-[90%] mx-auto sm:pl-0 pl-4 text-[15px] ${disp}`}>{desc}</p>
     </div>
   );
 };

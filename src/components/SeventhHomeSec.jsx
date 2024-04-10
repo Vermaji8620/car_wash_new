@@ -41,17 +41,13 @@ const SeventhHomeSec = () => {
   ];
   return (
     <div className="seventh_section pt-24 gap-4 flex flex-col pl-5">
-      <div className="w-[85%] sm:gap-3 gap-3 overflow-hidden flex">
+      <div className="sm:w-[85%] sm:gap-3 gap-1 overflow-hidden flex">
         <div className="sm:w-[46px] w-[96px] relative sm:top-4">
-          <img src={Rect} alt="" />
+          <img src={Rect} alt=""  className="sm:h-full h-[70px]"/>
         </div>
-        <div className="flex sm:gap-3 gap-1 sm:-mt-0 -mt-3 flex-col">
-          <div className="w-[914px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[14.5px] overflow-hidden leading-[50px] ">
+        <div className="flex sm:mt-10 -mt-1 items-center">
+          <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-hidden leading-[28px]">
             Common Car Service Questions in Surat
-          </div>
-          <div className="font-poppins font-[400] sm:w-[704px] w-[18rem] sm:h-[81px] h-full gap-1 sm:text-[18px] sm:leading-[27px] leading-[20px] text-[#6B6B6B] justify-start pt-3 flex flex-col">
-            Lorem Ipsum s simply dummy text of the printing and typesetting and
-            typesetting industry.
           </div>
         </div>
       </div>

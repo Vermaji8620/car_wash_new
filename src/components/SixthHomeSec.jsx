@@ -10,17 +10,13 @@ import Rect from "../assets/Rectangle 192.png";
 const SixthHomeSec = () => {
   return (
     <div className="sixth_section relative overflow-y-hidden sm:pt-24 sm:-mt-0 -mt-24 gap-8 flex flex-col pl-5">
-      <div className="w-[85%] sm:gap-3 gap-3 overflow-hidden flex">
+      <div className="sm:w-[85%] sm:gap-3 gap-1 overflow-hidden flex">
         <div className="sm:w-[46px] w-[96px] relative sm:top-4">
-          <img src={Rect} alt="" />
+          <img src={Rect} alt=""  className="sm:h-full h-[70px]"/>
         </div>
-        <div className="flex sm:gap-3 sm:-mt-0 -mt-3 flex-col">
-          <div className="w-[914px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[14.5px] overflow-hidden leading-[50px] ">
-            What Car Owners in Bangalore Say
-          </div>
-          <div className="font-poppins font-[400] sm:w-[704px] w-[18rem] sm:h-[81px] h-full gap-1 sm:text-[18px] sm:leading-[27px] leading-[20px] text-[#6B6B6B] justify-start pt-3 flex flex-col">
-            Lorem Ipsum s simply dummy text of the printing and typesetting and
-            typesetting industry.
+        <div className="flex sm:mt-10 -mt-1 items-center">
+          <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-hidden leading-[28px]">
+            What Our Customers Say
           </div>
         </div>
       </div>
@@ -83,133 +79,132 @@ const SixthHomeSec = () => {
       </div>
 
       <div className="sm:hidden flex h-[300px] overflow-x-auto -mt-9 flex-nowrap">
-            <div className="w-[100vw] flex-none ">
-              <div className="overflow-hidden flex-none -mt-2 translate-x-6">
-                <img
-                  src={person1}
-                  className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
-                  alt=""
-                />
-                <div className="sm:hidden  overflow-hidden w-full relative top-16">
-                  <img src={bluerect} className="w-[80%] " alt="" />
-                  <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
-                    <p className="text-[20px] text-center relative right-10 ">
-                      Sarah Jahnam
-                    </p>
-                    <p className="text-[10px]  text-center relative right-10">
-                      CEO of IT Company
-                    </p>
-                    <p className="text-[10px] text-center left-3 relative w-[70%]">
-                      “ Lorem Ipsumsimply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industrys standard dummy text
-                      ever since the 1500s”
-                    </p>
-                  </div>
-                </div>
+        <div className="w-[100vw] flex-none ">
+          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
               </div>
             </div>
-            <div className="w-[100vw] flex-none ">
-              <div className="overflow-hidden flex-none -mt-2 translate-x-6">
-                <img
-                  src={person1}
-                  className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
-                  alt=""
-                />
-                <div className="sm:hidden  overflow-hidden w-full relative top-16">
-                  <img src={bluerect} className="w-[80%] " alt="" />
-                  <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
-                    <p className="text-[20px] text-center relative right-10 ">
-                      Sarah Jahnam
-                    </p>
-                    <p className="text-[10px]  text-center relative right-10">
-                      CEO of IT Company
-                    </p>
-                    <p className="text-[10px] text-center left-3 relative w-[70%]">
-                      “ Lorem Ipsumsimply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industrys standard dummy text
-                      ever since the 1500s”
-                    </p>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div className="w-[100vw] flex-none ">
+          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
               </div>
             </div>
-            <div className="w-[100vw] flex-none ">
-              <div className="overflow-hidden flex-none -mt-2 translate-x-6">
-                <img
-                  src={person1}
-                  className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
-                  alt=""
-                />
-                <div className="sm:hidden  overflow-hidden w-full relative top-16">
-                  <img src={bluerect} className="w-[80%] " alt="" />
-                  <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
-                    <p className="text-[20px] text-center relative right-10 ">
-                      Sarah Jahnam
-                    </p>
-                    <p className="text-[10px]  text-center relative right-10">
-                      CEO of IT Company
-                    </p>
-                    <p className="text-[10px] text-center left-3 relative w-[70%]">
-                      “ Lorem Ipsumsimply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industrys standard dummy text
-                      ever since the 1500s”
-                    </p>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div className="w-[100vw] flex-none ">
+          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
               </div>
             </div>
-            <div className="w-[100vw] flex-none ">
-              <div className="overflow-hidden flex-none -mt-2 translate-x-6">
-                <img
-                  src={person1}
-                  className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
-                  alt=""
-                />
-                <div className="sm:hidden  overflow-hidden w-full relative top-16">
-                  <img src={bluerect} className="w-[80%] " alt="" />
-                  <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
-                    <p className="text-[20px] text-center relative right-10 ">
-                      Sarah Jahnam
-                    </p>
-                    <p className="text-[10px]  text-center relative right-10">
-                      CEO of IT Company
-                    </p>
-                    <p className="text-[10px] text-center left-3 relative w-[70%]">
-                      “ Lorem Ipsumsimply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industrys standard dummy text
-                      ever since the 1500s”
-                    </p>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div className="w-[100vw] flex-none ">
+          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
               </div>
             </div>
-            <div className="w-[100vw] flex-none ">
-              <div className="overflow-hidden flex-none -mt-2 translate-x-6">
-                <img
-                  src={person1}
-                  className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
-                  alt=""
-                />
-                <div className="sm:hidden  overflow-hidden w-full relative top-16">
-                  <img src={bluerect} className="w-[80%] " alt="" />
-                  <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
-                    <p className="text-[20px] text-center relative right-10 ">
-                      Sarah Jahnam
-                    </p>
-                    <p className="text-[10px]  text-center relative right-10">
-                      CEO of IT Company
-                    </p>
-                    <p className="text-[10px] text-center left-3 relative w-[70%]">
-                      “ Lorem Ipsumsimply dummy text of the printing and typesetting
-                      industry. Lorem Ipsum has been the industrys standard dummy text
-                      ever since the 1500s”
-                    </p>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div className="w-[100vw] flex-none ">
+          <div className="overflow-hidden flex-none -mt-2 translate-x-6">
+            <img
+              src={person1}
+              className="sm:hidden absolute w-[80px] rounded-full bottom-48 left-[100px] z-30 h-[80px] "
+              alt=""
+            />
+            <div className="sm:hidden  overflow-hidden w-full relative top-16">
+              <img src={bluerect} className="w-[80%] " alt="" />
+              <div className="text-white gap-2 flex flex-col mt-8 absolute top-7">
+                <p className="text-[20px] text-center relative right-10 ">
+                  Sarah Jahnam
+                </p>
+                <p className="text-[10px]  text-center relative right-10">
+                  CEO of IT Company
+                </p>
+                <p className="text-[10px] text-center left-3 relative w-[70%]">
+                  “ Lorem Ipsumsimply dummy text of the printing and typesetting
+                  industry. Lorem Ipsum has been the industrys standard dummy
+                  text ever since the 1500s”
+                </p>
               </div>
             </div>
+          </div>
+        </div>
       </div>
-    
     </div>
   );
 };
