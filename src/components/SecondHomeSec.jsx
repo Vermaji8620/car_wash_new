@@ -10,7 +10,7 @@ import sofa from "../assets/sofa.png";
 
 const SecondHomeSec = () => {
   return (
-    <div className="second_section sm:mt-0 mt-[530px] pt-10 pl-5">
+    <div className="second_section sm:mt-0 mt-[430px] pt-10 pl-5">
       <div className="sm:w-[60%] w-[95%] sm:h-full relative gap-6 flex flex-col">
         {/* <div className="absolute top-8 -left-2">
           <img src={circle} alt="" />
@@ -45,15 +45,15 @@ const SecondHomeSec = () => {
           <p className="flex items-center flex-col gap-1 flex-none">Rating</p>
         </div>
         <div className="sm:w-[85%] sm:gap-3 gap-1 overflow-hidden flex">
-        <div className="sm:w-[46px] w-[96px] relative sm:top-4">
-          <img src={Rect} alt=""  className="sm:h-full h-[70px]"/>
-        </div>
-        <div className="flex sm:mt-10 -mt-1 items-center">
-          <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-hidden leading-[28px]">
-            Car Services available in Surat
+          <div className="sm:w-[46px] w-[96px] relative sm:top-4">
+            <img src={Rect} alt="" className="sm:h-full h-[70px]" />
+          </div>
+          <div className="flex sm:mt-10 -mt-1 items-center">
+            <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-hidden leading-[28px]">
+              Car Services available in Surat
+            </div>
           </div>
         </div>
-      </div>
         <div className="ml-10 justify-between gap-8 flex sm:-translate-x-0 -translate-x-5 flex-wrap">
           <div className="flex sm:gap-20 gap-3">
             <div className="sm:shadow-lg  relative sm:m-4 sm:w-[180px] sm:h-[180px] h-full flex flex-col justify-end rounded-[10px]">

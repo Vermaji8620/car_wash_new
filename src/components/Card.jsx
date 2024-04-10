@@ -6,7 +6,7 @@ import line from "../assets/line.png";
 
 const Card = () => {
   return (
-    <div className="sm:sticky relative sm:top-56 top-[54rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-16 flex items-center w-full mx-auto p-4 sm:pt-8 sm:w-[500px] sm:ml-[980px] ">
+    <div className="sm:sticky relative sm:top-56 top-[54rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-40 flex items-center w-full mx-auto p-4 sm:pt-8 sm:w-[500px] sm:ml-[980px] ">
       <div className="mx-auto gap-3 flex flex-col">
         <div className="sm:w-[402px] h-[114px]">
           <p className="font-poppins sm:text-start font-[700] sm:text-[37px] text-[24px] sm:leading-[45.5px]">

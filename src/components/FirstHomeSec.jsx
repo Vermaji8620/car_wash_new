@@ -8,11 +8,11 @@ import wash6 from "../assets/wasng.webp"
 const FirstSec = () => {
   return (
     <div className="">
-      <div className="hidden sm:inline-block bg-backimage first_section">
-        <img src={CarBack} className="md:w-[1749px] md:h-[1278px] " alt="" />
+      <div className="hidden sm:inline-block bg-backimage mt-40 first_section">
+        <img src={CarBack} className="sm:w-[1749px] sm:h-[1278px] " alt="" />
       </div>
 
-      <div className="sm:hidden flex w-[700px] overflow-x-auto gap-1 first_section">
+      <div className="sm:hidden flex w-[700px] relative overflow-x-auto gap-1 first_section">
         <img src={wash1} className="w-[300px] flex-none rounded-[20px] h-[220px] mx-auto mt-8 ml-2 mr-3" alt="" />
         <img src={wash2} className="w-[300px] flex-none rounded-[20px] h-[220px] mx-auto mt-8 ml-2 mr-3" alt="" />
         <img src={wash3} className="w-[300px] flex-none rounded-[20px] h-[220px] mx-auto mt-8 ml-2 mr-3" alt="" />
