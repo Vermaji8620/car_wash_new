@@ -4,8 +4,6 @@ import frame from "../assets/Frame.png";
 import mainlogo from "../assets/mainlogo.png";
 
 const Header = () => {
-
-  
   return (
     <>
       <div className="sm:flex hidden absolute z-40 justify-around items-center w-[1257px] h-[76px] overflow-hidden bg-[#74B9FF] rounded-[50px] mt-6 ml-32">

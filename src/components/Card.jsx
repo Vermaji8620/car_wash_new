@@ -3,10 +3,28 @@ import smallcar from "../assets/smallcar.png";
 import star from "../assets/starr.png";
 import telephone from "../assets/telephone.png";
 import line from "../assets/line.png";
+import { useEffect, useState } from "react";
 
 const Card = () => {
+  const [phno, setPhno] = useState("");
+  const [error, setError] = useState("");
+  useEffect(() => {
+    setTimeout(() => {
+      setError("");
+    }, 2000);
+  }, [error]);
   return (
-    <div className="sm:sticky relative sm:top-56 top-[54rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-40 flex items-center w-full mx-auto p-4 sm:pt-8 sm:w-[500px] sm:ml-[980px] ">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (phno === "" || !/^[6-9]\d{9}$/.test(phno)) {
+          setError("Enter Valid Input");
+          return;
+        }
+        console.log(phno);
+      }}
+      className="sm:sticky relative sm:top-56 top-[54rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-40 flex items-center w-full mx-auto p-4 sm:pt-8 sm:w-[500px] sm:ml-[980px] "
+    >
       <div className="mx-auto gap-3 flex flex-col">
         <div className="sm:w-[402px] h-[114px]">
           <p className="font-poppins sm:text-start font-[700] sm:text-[37px] text-[24px] sm:leading-[45.5px]">
@@ -31,19 +49,34 @@ const Card = () => {
         </div>
         <div className="border-[#000000] items-center pl-4 gap-3 sm:w-[400px] sm:h-[67px] h-[50px] rounded-[10px] flex border-[1px]">
           <img src={telephone} alt="" className="w-[30px] h-[30px]" />
-          <div className="w-[118px] h-[30px]">
+          <div className="h-[30px]">
             <p className="font-poppins font-[400] sm:text-[19px] leading-[28.5px] ">
-              91047 93373
+              <input
+                type="text"
+                name="phonenumber"
+                id="phonenumber"
+                required
+                style={{ outline: "none" }}
+                placeholder="Enter phone number"
+                value={phno}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  if (!isNaN(val) && /^\d{0,10}$/.test(val)) {
+                    setPhno(val);
+                  }
+                }}
+              />
             </p>
           </div>
         </div>
-        <div className="sm:w-[400px] sm:h-[58px] h-[50px] rounded-[10px] bg-[#74B9FF] items-center flex justify-center">
+        <div className="text-red-600">{error}</div>
+        <button className="sm:w-[400px] sm:h-[58px] h-[50px] rounded-[10px] bg-[#74B9FF] items-center flex justify-center">
           <div className="w-[235px] sm:h-[30px]">
-            <p className="text-white font-poppins text-[15px] sm:translate-x-0 translate-x-6 font-[600] sm:text-[19px] leading-[28.5px]">
+            <p className="text-white font-poppins text-[15px] sm:translate-x-0 font-[600] sm:text-[19px] leading-[28.5px]">
               CHECK PRICES FOR FREE
             </p>
           </div>
-        </div>
+        </button>
         <div className="flex items-center  overflow-hidden justify-between w-full mr-5">
           <div className="w-[176px] rounded-[20px] sm:gap-3 gap-1 flex flex-col text-center mt-3 h-[86px]">
             <div className="flex justify-center items-center">
@@ -73,7 +106,7 @@ const Card = () => {
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 
