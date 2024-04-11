@@ -78,7 +78,7 @@ const Card = () => {
           </div>
         </button>
         <div className="flex items-center  overflow-hidden justify-between w-full mr-5">
-          <div className="w-[176px] rounded-[20px] sm:gap-3 gap-1 flex flex-col text-center mt-3 h-[86px]">
+          <div className="w-[176px] rounded-[20px] gap-1 flex flex-col text-center mt-3 h-[86px]">
             <div className="flex justify-center items-center">
               <img src={star} className="w-[32.5px] h-[32.5px]" alt="" />
               <p className="sm:text-[24px] text-[20px] mt-1">4.7/5</p>

@@ -48,7 +48,7 @@ const Header = () => {
           </p>
         </Link>
       </div>
-      <div className="flex  justify-between w-[100vw] sm:hidden -mb-16 h-[10vh]  bg-blue-500">
+      <div className="flex justify-between w-[100vw] sm:hidden -mb-16 h-[10vh]  bg-blue-500">
         <div className="flex items-start">
           <IoMenu className="text-[40px] mt-2" />
           <img src={mainlogo} className="-mt-8" alt="" />
