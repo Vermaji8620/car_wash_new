@@ -16,11 +16,11 @@ const ServiceCard = () => {
     }, 2000);
   }, [error]);
   return (
-    <div className="sm:sticky relative sm:top-40 top-[54rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-40 flex-col flex items-center w-full gap-5 mx-auto p-4 sm:w-[500px] sm:ml-[980px]">
+    <div className="sm:sticky relative sm:top-10 top-[36rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-40 sm:inline-block hidden items-center w-full gap-5 mx-auto p-4 sm:w-[500px] sm:ml-[980px]">
       {/* hidden ya visible hoga according to lcs , uske liye ek red dot point laga diye hai */}
 
       {/* display this  */}
-      <div className="flex flex-col gap-5">
+      {/* <div className="flex flex-col gap-5">
         <div className="translate-x-7 pt-2 w-[238px] h-[35px]">
           <p className="font-poppins font-[600] text-[23px] leading-[34.5px]">
             Select Manufacturer
@@ -173,15 +173,15 @@ const ServiceCard = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* or display this */}
-      {/* <div className="flex flex-col w-full gap-7">
+      <div className="flex flex-col w-full gap-3">
         <div className="flex justify-center">
-          <div className="w-[175px] h-[172px] bg-[#74B9FF] rounded-full">
+          <div className="w-[105px] h-[102px] bg-[#74B9FF] rounded-full">
             <img
               src={carontop}
-              className="w-[270px] h-[172px] left-32 absolute"
+              className="w-[140px] h-[122px] left-58 top-0 absolute"
               alt=""
             />
           </div>
@@ -190,7 +190,7 @@ const ServiceCard = () => {
         <div className="flex justify-between items-center">
           <div className="flex  items-center gap-4">
             <div className="w-[20px] h-[20px] rounded-full bg-[#5B5B5B]"></div>
-            <div className="w-[148px] h-[23px] font-poppins font-[600] text-[15px] leading-[22.5px]  ">
+            <div className="w-[148px] h-[23px] font-poppins font-[600] text-[15px] leading-[22.5px]">
               Maruti Suzuki AStar
             </div>
             <div className="w-[90px] h-[30px]  rounded-[10px] flex items-center justify-center border-[1px] bg-[#EBF5FF] border-[#74B9FF]">
@@ -202,7 +202,7 @@ const ServiceCard = () => {
             </div>
           </div>
           <div className="w-[64px] h-[23px]">
-            <p className="font-poppins font-[600] text-[15px] leading-[22.5px] text-[#FF0000] ">
+            <p className="font-poppins font-[600] text-[15px] leading-[22.5px] text-[#FF0000]">
               CHANGE
             </p>
           </div>
@@ -326,7 +326,7 @@ const ServiceCard = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
