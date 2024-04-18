@@ -181,7 +181,7 @@ const ServiceCard = () => {
           <div className="w-[105px] h-[102px] bg-[#74B9FF] rounded-full">
             <img
               src={carontop}
-              className="w-[140px] h-[122px] left-58 top-0 absolute"
+              className="w-[190px] h-[122px] left-40 top-0 absolute"
               alt=""
             />
           </div>
@@ -224,9 +224,9 @@ const ServiceCard = () => {
             </div>
             <div className="flex items-center gap-3">
               <div className="w-[52px] h-[23px]">
-                <p className="text-[#ADADAD] font-poppins font-[600] text-[15px] leading-[22.5px]">
+                <strike className="text-[#ADADAD] font-poppins font-[600] text-[15px] leading-[22.5px]">
                   ₹ 4699
-                </p>
+                </strike>
               </div>
               <div className="w-[52px] h-[23px]">
                 <p className="font-poppins font-[600] text-[15px] leading-[22.5px]">
@@ -235,40 +235,6 @@ const ServiceCard = () => {
               </div>
               <div className="w-[32px] flex items-center justify-center h-[29px] rounded-[10px] bg-[#FFDFDF] border-[1px] border-[#FF7474]">
                 <img src={dlte} alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-[437px] h-[114px] p-3 bg-[#3C3C3C] rounded-[10px] border-[1px] mx-auto flex justify-between border-black">
-          <div className="w-[90%] mx-auto flex justify-between items-center flex-col">
-            <div className="flex justify-between items-center w-full">
-              <div className="flex items-center gap-3">
-                <div className="w-[91px] h-[29px] items-center flex justify-center rounded-[10px] bg-[#74B9FF]">
-                  <div className="w-[40px] h-[23px]">
-                    <p className="text-white font-poppins font-[600] text-[15px] leading-[22.5px] ">
-                      Miles
-                    </p>
-                  </div>
-                </div>
-                <div className="w-[97px] h-[23px]">
-                  <p className=" text-white font-poppins font-[600] text-[15px] leading-[22.5px] ">
-                    Membership
-                  </p>
-                </div>
-              </div>
-              <div className="w-[16px] h-[16px]">
-                <p className="text-white">&gt;</p>
-              </div>
-            </div>
-            <div className="flex text-white justify-between items-center w-full">
-              <div className="w-[50%]">₹ 20,000 Annual Savings</div>
-              <div className="w-[50%]">
-                Free SOS and much{" "}
-                <span className="text-[#74B9FF] font-[600]  underline">
-                  {" "}
-                  More
-                </span>
               </div>
             </div>
           </div>

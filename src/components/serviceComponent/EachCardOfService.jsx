@@ -138,9 +138,9 @@ const EachCardOfService = () => {
         <div className="flex items-center justify-between">
           <div className="flex gap-3 items-center">
             <div className="w-[52px] h-[27px]">
-              <p className="font-poppins text-[#ACACAC] font-[600] sm:text-[18px] text-[14px] leading-[27px]">
+              <strike className="font-poppins text-[#ACACAC] font-[600] sm:text-[18px] text-[14px] leading-[27px]">
                 ₹ 5141
-              </p>
+              </strike>
             </div>
             <div className="sm:w-[100px] sm:h-[30px]">
               <p className="font-poppins font-[600] sm:text-[20px] text-[18px] leading-[30px]">
@@ -150,11 +150,11 @@ const EachCardOfService = () => {
           </div>
           <div className="sm:w-[162px] sm:relative border-[2px] border-[#74B9FF] sm:bg-[#E7FFE8] bg-white absolute sm:bottom-0 bottom-8 sm:left-0 left-56 sm:h-[46px] p-1 sm:rounded-[10px] rounded-[5px] sm:translate-x-0 translate-x-6 flex items-center w-[70px]">
             <div className=" h-[23px] flex items-center justify-center gap-5 mx-auto">
-              <img
+              {/* <img
                 src={cartick}
                 alt=""
-                className="hidden bg-white text-green-500 sm:inline-block w-[18px] h-[18px]"
-              />
+                className="hidden text-green-500 sm:inline-block w-[18px] h-[18px]"
+              /> */}
               <div className="w-[110px] h-[23px]">
                 <p className="font-poppins font-[700] text-[#74B9FF] sm:text-[15px]  text-[15px] sm:translate-x-0 leading-[22.5px] text-center">
                   ADD

@@ -5,9 +5,9 @@ import newlogo from "../assets/newlogo.png";
 
 const Header = () => {
   return (
-    <div className="flex justify-between sm:p-2 sm:-mb-0 -mb-16 sm:-mt-5 relative overflow-hidden">
+    <div className="flex justify-between sm:p-2 sm:-mb-3 -mb-16 sm:-mt-5 relative overflow-hidden">
       {/* from here is desktop view */}
-      <div className="sm:flex w-[100px] hidden sm:translate-y-3 sm:translate-x-10">
+      <div className="sm:flex w-[120px] hidden sm:translate-y-3 sm:translate-x-10">
         <img src={newlogo} alt="" />
       </div>
       <div className="sm:flex hidden absolute z-40 justify-around right-0 items-center w-[857px] h-[76px] overflow-hidden bg-[#74B9FF] rounded-[50px] mt-6 mr-14 ">
@@ -63,11 +63,20 @@ const Header = () => {
         </div>
       </div> */}
 
-      <div className="w-[100%] sm:hidden justify-between flex h-[50px] mb-20">
-        <IoMenu className="text-[50px]" />
-        <Link to="/">
-          <img src={newlogo} style={{ width: "100%", height: "100%" }} alt="" />
-        </Link>
+      <div className="w-[100%] sm:hidden justify-between flex h-[65px] mb-20">
+        <div className="flex justify-between">
+          <IoMenu className="text-[50px] mt-3 text-[#74B9FF]" />
+          <Link to="/">
+            <img
+              src={newlogo}
+              style={{ width: "100%", height: "100%", paddingLeft: "20px" }}
+              alt=""
+            />
+          </Link>
+        </div>
+        <div className="bg-gray-200 flex gap-1 mr-4 h-[25px] mt-6 pl-4 pr-4 rounded-lg">
+          Guwahati <p className="rotate-90">&gt;</p>
+        </div>
       </div>
     </div>
   );
