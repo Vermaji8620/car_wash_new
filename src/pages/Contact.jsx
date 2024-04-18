@@ -1,7 +1,9 @@
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div className="bg-gray-200">
+        contact
+    </div>
   )
 }
 
