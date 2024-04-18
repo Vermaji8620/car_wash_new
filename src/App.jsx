@@ -21,6 +21,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </BrowserRouter>
     </div>

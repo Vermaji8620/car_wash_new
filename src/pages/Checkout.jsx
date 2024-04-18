@@ -3,14 +3,15 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { TbCurrentLocation } from "react-icons/tb";
 import { useSelector } from "react-redux";
+import SeparateCartComponent from "../components/checkoutComponent/SeparateCartComponent";
 
 const Checkout = () => {
   const navigate = useNavigate();
   const selector = useSelector((state) => state.counter);
 
-  useEffect(() => {
-    if (selector.items.length === 0) navigate("/services");
-  }, [selector.items, navigate]);
+  // useEffect(() => {
+  //   if (selector.items.length === 0) navigate("/services");
+  // }, [selector.items, navigate]);
 
   const formRef = useRef(null);
   const [currentState, setCurrentState] = useState({
@@ -19,11 +20,13 @@ const Checkout = () => {
     fname: "",
     lname: "",
   });
+  console.log(currentState);
   const regex = /^(?=.*[a-zA-Z0-9].{3,})[a-zA-Z0-9 ,]+$/;
   const [buttonSetting, setButtonSetting] = useState({
     indxdate: null,
     valueinButtondate: "",
   });
+  console.log(buttonSetting);
   const monthArray = [
     "Jan",
     "Feb",
@@ -42,7 +45,7 @@ const Checkout = () => {
     indxtime: null,
     valueinButtontime: "",
   });
-
+  console.log(buttonSettings);
   useEffect(() => {
     setButtonSettings({
       indxtime: null,
@@ -72,127 +75,127 @@ const Checkout = () => {
     landmark: "",
   });
 
-  const paymentHandler = async () => {
-    console.log("handler defined again");
-    const paymentOptions = {
-      amount: 500,
-      currency: "INR",
-      receipt: "qwasqi1",
-    };
-    const data = await fetch("http://localhost:4000/payment/order", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(paymentOptions),
-    });
-    const res = await data.json();
-    let options = {
-      key: import.meta.VITE_RAZORPAY_KEY_ID,
-      amount: "50000",
-      currency: "INR",
-      name: "Wash Car",
-      description: "Test Transaction",
-      order_id: res.id,
-      handler: async function (response) {
-        const body = { ...response };
-        const validateRes = await fetch("http://localhost:4000/payment/check", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(body),
-        });
-        const ress = await validateRes.json();
-        console.log(ress);
-      },
-      prefill: {
-        name: "Car Wash",
-        description: "Car Washing service",
-        contact: "6564566515",
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#3399cc",
-      },
-    };
-    var rzp1 = new window.Razorpay(options);
-    rzp1.on("payment.failed", function (response) {
-      alert(response.error.code);
-      alert(response.error.description);
-      alert(response.error.source);
-      alert(response.error.step);
-      alert(response.error.reason);
-      alert(response.error.metadata.order_id);
-      alert(response.error.metadata.payment_id);
-    });
-    rzp1.open();
-  };
-
-  // const submitForm = (event) => {
-  //   event.preventDefault();
-  //   let fromDatavariable = {
-  //     address: currentState.address,
-  //     fname: currentState.fname,
-  //     lname: currentState.lname,
-  //     landmark: currentState.landmark,
-  //     day_and_date: buttonSetting.valueinButtondate,
-  //     time: buttonSettings.valueinButtontime,
+  // const paymentHandler = async () => {
+  //   console.log("handler defined again");
+  //   const paymentOptions = {
+  //     amount: 500,
+  //     currency: "INR",
+  //     receipt: "qwasqi1",
   //   };
-
-  //   if (fromDatavariable.day_and_date === "") {
-  //     setErrors({ ...errors, date: "Date field required" });
-  //     return;
-  //   }
-  //   if (fromDatavariable.time === "") {
-  //     setErrors({ ...errors, time: "Time field required" });
-  //     return;
-  //   }
-  //   if (fromDatavariable.fname === "") {
-  //     setErrors({ ...errors, firstName: "First Name required" });
-  //     return;
-  //   }
-  //   if (fromDatavariable.lname === "") {
-  //     setErrors({ ...errors, lastName: "Last Name required" });
-  //     return;
-  //   }
-  //   if (fromDatavariable.address === "") {
-  //     setErrors({ ...errors, address: "Address field required" });
-  //     return;
-  //   }
-  //   if (fromDatavariable.landmark === "") {
-  //     setErrors({ ...errors, landmark: "Landmark field required" });
-  //     return;
-  //   }
-
-  //   if (!regex.test(currentState.address)) {
-  //     setErrors({ ...errors, address: "Invalid Address" });
-  //     return;
-  //   }
-  //   if (!regex.test(currentState.landmark)) {
-  //     setErrors({ ...errors, landmark: "Invalid Lanmark" });
-  //     return;
-  //   }
-  //   if (!regex.test(currentState.fname)) {
-  //     setErrors({ ...errors, firstName: "Invalid First Name" });
-  //     return;
-  //   }
-  //   if (!regex.test(currentState.lname)) {
-  //     setErrors({ ...errors, lastName: "Invalid Last Name" });
-  //     return;
-  //   }
-  //   const extract = fromDatavariable.day_and_date.split("\n");
-  //   const extract_date = extract[0];
-  //   const extract_month = monthArray.indexOf(extract[1]);
-  //   fromDatavariable.day_and_date = `${extract_date}-${
-  //     extract_month + 1
-  //   }-${new Date().getFullYear()}`;
-
-  //   console.log(fromDatavariable);
-  //   paymentHandler();
+  //   const data = await fetch("http://localhost:4000/payment/order", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(paymentOptions),
+  //   });
+  //   const res = await data.json();
+  //   let options = {
+  //     key: import.meta.VITE_RAZORPAY_KEY_ID,
+  //     amount: "50000",
+  //     currency: "INR",
+  //     name: "Wash Car",
+  //     description: "Test Transaction",
+  //     order_id: res.id,
+  //     handler: async function (response) {
+  //       const body = { ...response };
+  //       const validateRes = await fetch("http://localhost:4000/payment/check", {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(body),
+  //       });
+  //       const ress = await validateRes.json();
+  //       console.log(ress);
+  //     },
+  //     prefill: {
+  //       name: "Car Wash",
+  //       description: "Car Washing service",
+  //       contact: "6564566515",
+  //     },
+  //     notes: {
+  //       address: "Razorpay Corporate Office",
+  //     },
+  //     theme: {
+  //       color: "#3399cc",
+  //     },
+  //   };
+  //   var rzp1 = new window.Razorpay(options);
+  //   rzp1.on("payment.failed", function (response) {
+  //     alert(response.error.code);
+  //     alert(response.error.description);
+  //     alert(response.error.source);
+  //     alert(response.error.step);
+  //     alert(response.error.reason);
+  //     alert(response.error.metadata.order_id);
+  //     alert(response.error.metadata.payment_id);
+  //   });
+  //   rzp1.open();
   // };
+
+  const submitForm = (event) => {
+    event.preventDefault();
+    let fromDatavariable = {
+      address: currentState.address,
+      fname: currentState.fname,
+      lname: currentState.lname,
+      landmark: currentState.landmark,
+      day_and_date: buttonSetting.valueinButtondate,
+      time: buttonSettings.valueinButtontime,
+    };
+
+    if (fromDatavariable.day_and_date === "") {
+      setErrors({ ...errors, date: "Date field required" });
+      return;
+    }
+    if (fromDatavariable.time === "") {
+      setErrors({ ...errors, time: "Time field required" });
+      return;
+    }
+    if (fromDatavariable.fname === "") {
+      setErrors({ ...errors, firstName: "First Name required" });
+      return;
+    }
+    if (fromDatavariable.lname === "") {
+      setErrors({ ...errors, lastName: "Last Name required" });
+      return;
+    }
+    if (fromDatavariable.address === "") {
+      setErrors({ ...errors, address: "Address field required" });
+      return;
+    }
+    if (fromDatavariable.landmark === "") {
+      setErrors({ ...errors, landmark: "Landmark field required" });
+      return;
+    }
+
+    if (!regex.test(currentState.address)) {
+      setErrors({ ...errors, address: "Invalid Address" });
+      return;
+    }
+    if (!regex.test(currentState.landmark)) {
+      setErrors({ ...errors, landmark: "Invalid Lanmark" });
+      return;
+    }
+    if (!regex.test(currentState.fname)) {
+      setErrors({ ...errors, firstName: "Invalid First Name" });
+      return;
+    }
+    if (!regex.test(currentState.lname)) {
+      setErrors({ ...errors, lastName: "Invalid Last Name" });
+      return;
+    }
+    const extract = fromDatavariable.day_and_date.split("\n");
+    const extract_date = extract[0];
+    const extract_month = monthArray.indexOf(extract[1]);
+    fromDatavariable.day_and_date = `${extract_date}-${
+      extract_month + 1
+    }-${new Date().getFullYear()}`;
+
+    console.log(fromDatavariable);
+    // paymentHandler();
+  };
 
   const fetchLocationFunc = () => {
     if (navigator.geolocation) {
@@ -228,13 +231,13 @@ const Checkout = () => {
     }
   };
 
-  // const handleFormSubmit = () => {
-  //   if (formRef.current) {
-  //     const formevent = new Event("submit", { cancelable: true });
-  //     formRef.current.dispatchEvent(formevent);
-  //     submitForm(formevent);
-  //   }
-  // };
+  const handleFormSubmit = () => {
+    if (formRef.current) {
+      const formevent = new Event("submit", { cancelable: true });
+      formRef.current.dispatchEvent(formevent);
+      submitForm(formevent);
+    }
+  };
 
   const [disableIndex, setDisableIndex] = useState([]);
 
@@ -253,12 +256,13 @@ const Checkout = () => {
     // Cleanup function to clear the timeouts if the component unmounts
     return () => timers.forEach(clearTimeout);
   }, [errors]);
+
   return (
     <div className="bg-[#F6F6F6]">
       <div className="flex justify-between w-[95%] mx-auto pt-10">
-        <div className="p-3 w-[70%] gap-10 flex flex-col">
+        <div className="p-3 w-[55%] gap-10 flex flex-col">
           <div className="bg-white rounded-[20px] p-8 flex flex-col gap-3">
-            <p className="font-semibold text-3xl">Logged In</p>
+            <p className="font-semibold text-3xl overflow-hidden">Logged In</p>
             <p className="text-gray-400">Customer | 8620032336</p>
           </div>
 
@@ -273,8 +277,8 @@ const Checkout = () => {
                   Select Date and Time of Service :
                 </div>
               </div>
-              <div className="flex gap-3">
-                {Array.from({ length: 12 }, (_, i) => {
+              <div className="flex gap-3 flex-wrap">
+                {Array.from({ length: 21 }, (_, i) => {
                   const dateCalculation = (new Date().getDate() + i) % 32;
                   if (dateCalculation === 0) return null;
                   return (
@@ -453,9 +457,9 @@ const Checkout = () => {
             </div>
           </form>
         </div>
-        {/* <div className="relative top-3 w-[27%]">
+        <div className="relative h-[100vh] top-10 flex justify-center w-[40%]">
           <SeparateCartComponent onButtonClick={handleFormSubmit} />
-        </div> */}
+        </div>
       </div>
     </div>
   );
