@@ -307,7 +307,7 @@ const Checkout = () => {
                     <div key={i} className=" flex-none">
                       <button
                         type="button"
-                        onClick={(event) => {
+                        onClick={() => {
                           setButtonSetting({
                             indxdate: i,
                             valueinButtondate: `${new Date().getDate() + i}\n${
@@ -340,7 +340,7 @@ const Checkout = () => {
                         } flex rounded-lg items-center h-[45px] md:w-fit overflow-hidden md:h-16`}
                       >
                         <div
-                          className={`bg-[#C1C1C1] flex items-center h-full ${
+                          className={`bg-[#C1C1C1] flex items-center md:h-full ${
                             new Date().getDate() === dateCalculation ||
                             new Date().getDate() + 1 === dateCalculation
                               ? "p-0"
@@ -354,7 +354,7 @@ const Checkout = () => {
                                 (new Date().getDay() + i) % weekDaysList.length
                               ]}
                         </div>
-                        <div className="bg-[#74B9FF] h-full flex items-center p-4">
+                        <div className="bg-[#74B9FF] md:h-full flex items-center p-4">
                           {new Date().getDate() === dateCalculation
                             ? "today"
                             : new Date().getDate() + 1 === dateCalculation
@@ -414,7 +414,8 @@ const Checkout = () => {
                           });
                         }}
                       >
-                        {cal1}-{cal2}PM
+                        {cal1 === 11 || cal1 === 12 ? cal1 : <>0{cal1}</>}-
+                        {cal2 === 11 || cal2 === 12 ? cal2 : <>0{cal2}</>} pm
                       </button>
                     </div>
                   );
@@ -567,7 +568,7 @@ const Checkout = () => {
             </div>
           </div>
         </div>
-        <div className="md:relative element-causing-scrollbar h-[100vh] top-10 flex justify-center w-full md:w-[40%]">
+        <div className="md:relative element-causing-scrollbar top-10 flex justify-center w-full md:w-[40%]">
           <SeparateCartComponent onButtonClick={handleFormSubmit} />
         </div>
       </div>

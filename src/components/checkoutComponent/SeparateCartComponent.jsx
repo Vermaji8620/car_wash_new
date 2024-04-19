@@ -1,6 +1,5 @@
 // import logo from "../assets/pexels-photo-112460-removebg-preview.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { MdArrowRightAlt } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import disc from "../../assets/disc.png";
@@ -27,7 +26,7 @@ const SeparateCartComponent = ({ onButtonClick }) => {
   }, [errorshow]);
 
   return (
-    <div className="rounded-2xl pb-10 md:w-[80%] md:top-10 md:h-min flex shadow-2xl flex-col bg-white shadow-black gap-3 items-center">
+    <div className="rounded-2xl relative pb-10 md:w-[80%] md:top-10 md:h-min flex shadow-2xl flex-col bg-white shadow-black gap-3 items-center">
       {/* <div>
         <img className="w-[50%] mx-auto" src={logo} alt="" />
       </div> */}
@@ -39,12 +38,12 @@ const SeparateCartComponent = ({ onButtonClick }) => {
 
       <div className="flex bg-[#E2FFE3] rounded-[10px] p-4 justify-between gap-8 w-[90%]">
         <div className="md:w-[65%] overflow-hidden">
-          <div className="font-poppins text-[#309534] font-[600] text-[18px] leading-[28px]">
+          <p className="font-poppins text-[#309534] font-[600] text-[18px] leading-[28px]">
             You can Save ₹ 1268
-          </div>
-          <div className="font-poppins text-[#309534] font-[400] text-[15px] leading-[22.5px]">
+          </p>
+          <p className="font-poppins text-[#309534] font-[400] text-[15px] leading-[22.5px]">
             With Miles Membership
-          </div>
+          </p>
         </div>
         <div className="md:w-[35%] flex justify-end h-[32px] ">
           <img src={percen} alt="" />
@@ -65,6 +64,7 @@ const SeparateCartComponent = ({ onButtonClick }) => {
             </div>
           ))}
       </div>
+      {/* <div className="h-[50px]"></div> */}
       {/* **************************************** */}
 
       {/* <p className="w-[90%] -mt-3 mx-auto">Extra Charges may apply</p> */}
