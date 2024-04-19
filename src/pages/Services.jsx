@@ -6,7 +6,7 @@ import ServiceCard from "../components/serviceComponent/ServiceCard";
 const Services = () => {
   return (
     <div className="w-full bg-[#F6F6F6] h-full sm:-mt-0">
-      <div className="w-full sm:relative h-[90vh] sm:-mt-0 -mt-16 sm:mb-0 mb-11 element-causing-scrollbar">
+      <div className="w-full sm:relative h-[100vh] sm:-mt-0 -mt-16 sm:mb-0 mb-11 element-causing-scrollbar">
         <ServiceCard />
         <div className="flex flex-col w-full sm:w-[60%] mx-auto sm:ml-10 sm:mt-2 mt-16 sm:p-3 p-1">
           <div className="w-[100%] sm:gap-0 gap-16 flex overflow-x-auto shadow-lg justify-around sm:p-3 p-4 rounded-[10px] border-[1px] font-[600] text-[13px] leading-[20px] font-poppins border-[#74B9FF] flex-nowrap">

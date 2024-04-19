@@ -16,35 +16,35 @@ const EachCardOfService = () => {
           <div className="flex flex-col sm:w-[80%] w-[60%] sm:gap-4 gap-4">
             <div className="flex justify-between">
               <div className="sm:w-[175px] sm:h-[30px]">
-                <p className="font-poppins font-[600] sm:text-[20px] text-[16px] sm:leading-[30px]">
+                <div className="font-poppins font-[600] sm:text-[20px] text-[16px] sm:leading-[30px]">
                   Standard Service
-                </p>
+                </div>
               </div>
               <div className="w-[173px] h-[37px] rounded-[10px] sm:flex hidden items-center bg-[#EBF5FF] justify-center">
                 <div className="w-[126px] h-[24px] justify-around flex items-center">
                   <img src={clockicon} alt="" />
                   <div className="w-[87px] h-[23px] ">
-                    <p className="font-poppins font-[400] text-[15px] leading-[22.5px]">
+                    <div className="font-poppins font-[400] text-[15px] leading-[22.5px]">
                       6 Hrs Taken
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="">
               <div className="w-[240px] hidden sm:inline-block h-[23px]">
-                <p className="font-poppins font-[400] sm:text-[15px] sm:leading-[22.5px]">
+                <div className="font-poppins font-[400] sm:text-[15px] sm:leading-[22.5px]">
                   1000 Kms or 1 Month Warranty
-                </p>
+                </div>
               </div>
               <div className="sm:w-[369px] overflow-hidden sm:h-[23px]">
-                <p className="font-poppins hidden sm:inline-block font-[400] sm:text-[15px] sm:leading-[22.5px]">
+                <div className="font-poppins hidden sm:inline-block font-[400] sm:text-[15px] sm:leading-[22.5px]">
                   Every 10,000 Kms or 6 Months (Recommended)
-                </p>
-                <p className=" sm:hidden gap-2 text-[12px] flex items-center">
-                  <p className="w-[4px] h-[4px] rounded-full bg-black"></p>Every
-                  10000 Kms
-                </p>
+                </div>
+                <div className=" sm:hidden gap-2 text-[12px] flex items-center">
+                  <div className="w-[4px] h-[4px] rounded-full bg-black"></div>
+                  Every 10000 Kms
+                </div>
               </div>
             </div>
             <div className="flex flex-wrap sm:-mt-0 -mt-4">
@@ -55,13 +55,13 @@ const EachCardOfService = () => {
                   alt=""
                 />
                 <div className="sm:h-[23px]">
-                  <p className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
+                  <div className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
                     Car Scanning
-                  </p>
-                  <p className=" sm:hidden gap-2 text-[12px] flex items-center">
-                    <p className="w-[4px] h-[4px] rounded-full bg-black"></p>
+                  </div>
+                  <div className=" sm:hidden gap-2 text-[12px] flex items-center">
+                    <div className="w-[4px] h-[4px] rounded-full bg-black"></div>
                     Takes 6 hours
-                  </p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 w-1/2">
@@ -71,9 +71,9 @@ const EachCardOfService = () => {
                   alt=""
                 />
                 <div className="sm:h-[23px] hidden sm:inline-block">
-                  <p className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
+                  <div className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
                     Wiper Fluid Replacement
-                  </p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:w-1/2">
@@ -83,13 +83,13 @@ const EachCardOfService = () => {
                   alt=""
                 />
                 <div className="sm:h-[23px]">
-                  <p className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
+                  <div className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
                     Battery Water Top up
-                  </p>
-                  <p className=" sm:hidden gap-2 text-[12px] flex items-center">
-                    <p className="w-[4px] h-[4px] rounded-full bg-black"></p> 1
-                    Month Warranty
-                  </p>
+                  </div>
+                  <div className=" sm:hidden gap-2 text-[12px] flex items-center">
+                    <div className="w-[4px] h-[4px] rounded-full bg-black"></div>{" "}
+                    1 Month Warranty
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 w-1/2">
@@ -99,9 +99,9 @@ const EachCardOfService = () => {
                   alt=""
                 />
                 <div className="sm:h-[23px]">
-                  <p className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
+                  <div className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
                     Car Wash
-                  </p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:w-1/2">
@@ -111,20 +111,20 @@ const EachCardOfService = () => {
                   alt=""
                 />
                 <div className="sm:h-[23px]">
-                  <p className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
+                  <div className="font-poppins hidden sm:inline-block font-[400] text-[15px] leading-[22.5px]">
                     Interior Vacuuming (Carpet & Seats)
-                  </p>
-                  <p className=" sm:hidden gap-2 text-[12px] flex items-center">
-                    <p className="w-[4px] h-[4px] rounded-full bg-black"></p>{" "}
+                  </div>
+                  <div className=" sm:hidden gap-2 text-[12px] flex items-center">
+                    <div className="w-[4px] h-[4px] rounded-full bg-black"></div>{" "}
                     Includes 15 services
-                  </p>
+                  </div>
                 </div>
               </div>
               <div className="flex items-center gap-2 w-1/2">
                 <div className="sm:h-[23px]">
-                  <p className="font-poppins hidden sm:inline-block text-[#309534] underline font-[400] text-[15px] leading-[22.5px]">
+                  <div className="font-poppins hidden sm:inline-block text-[#309534] underline font-[400] text-[15px] leading-[22.5px]">
                     +10 more View All
-                  </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -143,9 +143,9 @@ const EachCardOfService = () => {
               </strike>
             </div>
             <div className="sm:w-[100px] sm:h-[30px]">
-              <p className="font-poppins font-[600] sm:text-[20px] text-[18px] leading-[30px]">
+              <div className="font-poppins font-[600] sm:text-[20px] text-[18px] leading-[30px]">
                 ₹ 3599
-              </p>
+              </div>
             </div>
           </div>
           <div className="sm:w-[162px] sm:relative border-[2px] border-[#74B9FF] sm:bg-[#E7FFE8] bg-white absolute sm:bottom-0 bottom-8 sm:left-0 left-56 sm:h-[46px] p-1 sm:rounded-[10px] rounded-[5px] sm:translate-x-0 translate-x-6 flex items-center w-[70px]">
@@ -156,9 +156,9 @@ const EachCardOfService = () => {
                 className="hidden text-green-500 sm:inline-block w-[18px] h-[18px]"
               /> */}
               <div className="w-[110px] h-[23px]">
-                <p className="font-poppins font-[700] text-[#74B9FF] sm:text-[15px]  text-[15px] sm:translate-x-0 leading-[22.5px] text-center">
+                <div className="font-poppins font-[700] text-[#74B9FF] sm:text-[15px]  text-[15px] sm:translate-x-0 leading-[22.5px] text-center">
                   ADD
-                </p>
+                </div>
               </div>
             </div>
           </div>

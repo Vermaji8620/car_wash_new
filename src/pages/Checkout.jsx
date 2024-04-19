@@ -2,14 +2,14 @@ import { useState, useRef, useEffect } from "react";
 import payonline from "../assets/payonline.png";
 import cash from "../assets/cash.png";
 // import SeparateCartComponent from "../components/SeparateCartComponent";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+// import { useSelector } from "react-redux";
 import { TbCurrentLocation } from "react-icons/tb";
-import { useSelector } from "react-redux";
 import SeparateCartComponent from "../components/checkoutComponent/SeparateCartComponent";
 
 const Checkout = () => {
-  const navigate = useNavigate();
-  const selector = useSelector((state) => state.counter);
+  // const navigate = useNavigate();
+  // const selector = useSelector((state) => state.counter);
 
   // useEffect(() => {
   //   if (selector.items.length === 0) navigate("/services");
@@ -335,8 +335,8 @@ const Checkout = () => {
                         }}
                         className={`border ${
                           i === buttonSetting.indxdate
-                            ? "bg-[#60A5FA] text-white border-gray-400 border-[2px]"
-                            : "bg-white"
+                            ? "bg-[#60A5FA] text-white"
+                            : "bg-white text-[#60A5FA] border-[#60A5FA] border-[2px]"
                         } flex rounded-lg items-center h-[45px] md:w-fit overflow-hidden md:h-16`}
                       >
                         <div
@@ -354,7 +354,7 @@ const Checkout = () => {
                                 (new Date().getDay() + i) % weekDaysList.length
                               ]}
                         </div>
-                        <div className="bg-[#74B9FF] md:h-full flex items-center p-4">
+                        <div className="md:h-full flex items-center p-4">
                           {new Date().getDate() === dateCalculation
                             ? "today"
                             : new Date().getDate() + 1 === dateCalculation
@@ -402,7 +402,7 @@ const Checkout = () => {
                           i === buttonSettings.indxtime
                             ? "bg-[#60A5FA] text-white border-none"
                             : ""
-                        }  border-[#74B9FF] border-[2px]  selectedhover p-3 rounded-lg ${
+                        }  border-[#74B9FF] border-[2px] text-[#74B9FF] selectedhover p-3 rounded-lg ${
                           disableIndex.includes(i)
                             ? "cursor-not-allowed bg-gray-400 hover:bg-gray-400 border-none text-white"
                             : ""
