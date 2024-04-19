@@ -27,16 +27,18 @@ const SeparateCartComponent = ({ onButtonClick }) => {
   }, [errorshow]);
 
   return (
-    <div className="rounded-2xl pb-10 w-[80%] top-10 h-min flex shadow-2xl flex-col bg-white shadow-black gap-3 items-center">
+    <div className="rounded-2xl pb-10 md:w-[80%] md:top-10 md:h-min flex shadow-2xl flex-col bg-white shadow-black gap-3 items-center">
       {/* <div>
         <img className="w-[50%] mx-auto" src={logo} alt="" />
       </div> */}
       <div className="flex justify-between gap-8 w-[90%]">
-        <p className="font-[600] text-[32px]  pt-4 leading-[48px]">CART</p>
+        <p className="font-[600] md:text-[32px] text-xl pt-4 leading-[48px]">
+          CART
+        </p>
       </div>
 
       <div className="flex bg-[#E2FFE3] rounded-[10px] p-4 justify-between gap-8 w-[90%]">
-        <div className="w-[65%]">
+        <div className="md:w-[65%] overflow-hidden">
           <div className="font-poppins text-[#309534] font-[600] text-[18px] leading-[28px]">
             You can Save ₹ 1268
           </div>
@@ -44,11 +46,12 @@ const SeparateCartComponent = ({ onButtonClick }) => {
             With Miles Membership
           </div>
         </div>
-        <div className="w-[35%] flex justify-end h-[32px] ">
+        <div className="md:w-[35%] flex justify-end h-[32px] ">
           <img src={percen} alt="" />
         </div>
       </div>
 
+      {/* ************************************** */}
       <div className="w-[90%] border rounded-[20px] border-blue-800">
         {selector.items.length > 0 &&
           selector.items.map((element, index) => (
@@ -62,6 +65,7 @@ const SeparateCartComponent = ({ onButtonClick }) => {
             </div>
           ))}
       </div>
+      {/* **************************************** */}
 
       {/* <p className="w-[90%] -mt-3 mx-auto">Extra Charges may apply</p> */}
       <button className="w-[90%] rounded-[10px] items-center p-3 border flex justify-between border-dotted border-gray-400">
@@ -80,12 +84,12 @@ const SeparateCartComponent = ({ onButtonClick }) => {
         </p>
       </div>
 
-      <div className="w-[90%] gap-6 items-center flex justify-between">
+      <div className="w-[90%] overflow-hidden gap-6 items-center flex justify-between">
         <div className="w-[56px] flex items-center justify-center font-bold h-[36px] rounded-[5px] border-[1.5px] border-[#74B9FF]">
           &lt;
         </div>
 
-        <div className="flex border-[2px] p-4 border-black gap-4 rounded-[10px] flex-col">
+        <div className="flex border-[2px] md:p-4 p-2  border-black gap-4 rounded-[10px] flex-col">
           <div className="flex">
             <div className="">
               <p className="font-poppins font-[600] text-[15px] leading-[22.5px]">
@@ -95,7 +99,7 @@ const SeparateCartComponent = ({ onButtonClick }) => {
                 30% Improvement in Car Breathing Air Quality
               </p>
             </div>
-            <div className="">
+            <div className="md:inline-block hidden">
               <img className="w-[69px] h-[69px]" src={personcarwash} alt="" />
             </div>
           </div>
@@ -119,9 +123,7 @@ const SeparateCartComponent = ({ onButtonClick }) => {
       </div>
 
       <div className="w-[90%] text-black  flex justify-between">
-        <p className="overflow-hidden font-bold text-2xl">
-          Subtotal {selector.items.length} items
-        </p>
+        <p className="overflow-hidden font-bold text-xl">Subtotal</p>
         <p className="font-bold flex items-center">
           <FaRupeeSign />
           {selector.grandtotal}

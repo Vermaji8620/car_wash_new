@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+import payonline from "../assets/payonline.png";
+import cash from "../assets/cash.png";
 // import SeparateCartComponent from "../components/SeparateCartComponent";
 import { useNavigate } from "react-router-dom";
 import { TbCurrentLocation } from "react-icons/tb";
@@ -41,6 +43,7 @@ const Checkout = () => {
     "Nov",
     "Dec",
   ];
+  const weekDaysList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const [buttonSettings, setButtonSettings] = useState({
     indxtime: null,
     valueinButtontime: "",
@@ -258,26 +261,32 @@ const Checkout = () => {
   }, [errors]);
 
   return (
-    <div className="bg-[#F6F6F6]">
-      <div className="flex justify-between w-[95%] mx-auto pt-10">
-        <div className="p-3 w-[55%] gap-10 flex flex-col">
-          <div className="bg-white rounded-[20px] p-8 flex flex-col gap-3">
-            <p className="font-semibold text-3xl overflow-hidden">Logged In</p>
+    <div className="bg-[#F0F0F0]">
+      <div className="md:flex justify-between w-[95%] mx-auto md:pt-10">
+        <div className="p-3 md:w-[55%] w-full gap-10 flex flex-col">
+          <div className="bg-white rounded-[20px] md:p-8 p-3 flex flex-col md:gap-3 gap-1">
+            <p className="font-semibold md:text-3xl text-xl overflow-hidden">
+              Logged In
+            </p>
             <p className="text-gray-400">Customer | 8620032336</p>
           </div>
+
           <form
             ref={formRef}
             // onSubmit={submitForm}
             className="flex flex-col gap-6"
           >
-            <div className=" bg-white rounded-[20px] p-8 flex flex-col gap-8">
+            <div className=" bg-white rounded-[20px] md:p-8 p-4 flex flex-col gap-8">
               <div className="flex gap-16 items-center">
                 <div className="text-xl font-bold">
-                  Select Date and Time of Service :
+                  Select Date and Time of Service
                 </div>
               </div>
               {/* (new Date().getDate() + i) % 32 */}
-              <div className="flex gap-5 justify-center flex-wrap">
+              <div
+                className="flex md:gap-5 md:pr-0 gap-5 md:pl-[510px] w-full pl-[617px] element-causing-scrollbar 
+              justify-center flex-nowrap overflow-x-auto"
+              >
                 {Array.from({ length: 8 }, (_, i) => {
                   const dateCalculation =
                     new Date().getMonth() === 0 ||
@@ -295,44 +304,71 @@ const Checkout = () => {
                       : (new Date().getDate() + i) % 29;
                   if (dateCalculation === 0) return null;
                   return (
-                    <div key={i} className="">
+                    <div key={i} className=" flex-none">
                       <button
                         type="button"
                         onClick={(event) => {
                           setButtonSetting({
                             indxdate: i,
-                            valueinButtondate:
-                              new Date().getDate() === dateCalculation
-                                ? `${new Date().getDate()}\n${
-                                    monthArray[new Date().getMonth()]
-                                  }`
-                                : new Date().getDate() + 1 === dateCalculation
-                                ? `${new Date().getDate() + 1}\n${
-                                    monthArray[new Date().getMonth()]
-                                  }`
-                                : event.target.innerText,
+                            valueinButtondate: `${new Date().getDate() + i}\n${
+                              monthArray[
+                                dateCalculation < new Date().getDate()
+                                  ? new Date().getMonth() + 1
+                                  : new Date().getMonth()
+                              ]
+                            }`,
+
+                            // not to be used
+
+                            // new Date().getDate() === dateCalculation
+                            //   ? `${new Date().getDate()}\n${
+                            //       monthArray[new Date().getMonth()]
+                            //     }`
+                            //   : new Date().getDate() + 1 === dateCalculation
+                            //   ? `${new Date().getDate() + 1}\n${
+                            //       monthArray[new Date().getMonth()]
+                            //     }`
+                            //   : event.target.innerText,
+
+                            // not to be used
                           });
                         }}
                         className={`border ${
                           i === buttonSetting.indxdate
-                            ? "bg-[#60A5FA] text-white border-none"
+                            ? "bg-[#60A5FA] text-white border-gray-400 border-[2px]"
                             : "bg-white"
-                        } border-black selectedhover rounded-lg w-fit p-4 overflow-hidden h-16 gap-10`}
+                        } flex rounded-lg items-center h-[45px] md:w-fit overflow-hidden md:h-16`}
                       >
-                        {new Date().getDate() === dateCalculation
-                          ? "today"
-                          : new Date().getDate() + 1 === dateCalculation
-                          ? "tomorrow"
-                          : dateCalculation}
-                        <br />
-                        {new Date().getDate() === dateCalculation ||
-                        new Date().getDate() + 1 === dateCalculation
-                          ? ""
-                          : monthArray[
-                              dateCalculation < new Date().getDate()
-                                ? new Date().getMonth() + 1
-                                : new Date().getMonth()
-                            ]}
+                        <div
+                          className={`bg-[#C1C1C1] flex items-center h-full ${
+                            new Date().getDate() === dateCalculation ||
+                            new Date().getDate() + 1 === dateCalculation
+                              ? "p-0"
+                              : "p-4"
+                          }`}
+                        >
+                          {new Date().getDate() === dateCalculation ||
+                          new Date().getDate() + 1 === dateCalculation
+                            ? ""
+                            : weekDaysList[
+                                (new Date().getDay() + i) % weekDaysList.length
+                              ]}
+                        </div>
+                        <div className="bg-[#74B9FF] h-full flex items-center p-4">
+                          {new Date().getDate() === dateCalculation
+                            ? "today"
+                            : new Date().getDate() + 1 === dateCalculation
+                            ? "tomorrow"
+                            : dateCalculation}{" "}
+                          {new Date().getDate() === dateCalculation ||
+                          new Date().getDate() + 1 === dateCalculation
+                            ? ""
+                            : monthArray[
+                                dateCalculation < new Date().getDate()
+                                  ? new Date().getMonth() + 1
+                                  : new Date().getMonth()
+                              ]}
+                        </div>
                       </button>
                     </div>
                   );
@@ -362,11 +398,11 @@ const Checkout = () => {
                       <button
                         type="button"
                         disabled={findDisableOrNot}
-                        className={`w-[210px] ${
+                        className={`md:w-[210px] w-fit ${
                           i === buttonSettings.indxtime
                             ? "bg-[#60A5FA] text-white border-none"
                             : ""
-                        } border border-black selectedhover p-3 rounded-lg ${
+                        }  border-[#74B9FF] border-[2px]  selectedhover p-3 rounded-lg ${
                           disableIndex.includes(i)
                             ? "cursor-not-allowed bg-gray-400 hover:bg-gray-400 border-none text-white"
                             : ""
@@ -389,21 +425,21 @@ const Checkout = () => {
               </div>
             </div>
 
-            <div className="p-8 flex gap-4 bg-white rounded-[20px]">
-              <div className="flex w-[70%] flex-col gap-8">
+            <div className="md:p-8 p-2 md:flex md:gap-4 w-full bg-white rounded-[20px]">
+              <div className="flex md:w-[70%] flex-col gap-8">
                 <div className="flex w-full">
-                  <div className="flex w-full flex-col gap-4">
+                  <div className="flex  w-full flex-col gap-4">
                     <label id="" className="font-bold text-xl">
-                      Enter First Name
+                      Enter Name
                     </label>
-                    <div className="flex gap-2">
-                      <div className="w-full flex flex-col gap-2">
+                    <div className="md:flex gap-2">
+                      <div className="md:w-full flex flex-col gap-2">
                         <input
                           type="text"
                           name="fname"
                           id="fnameeee"
-                          className="border h-12 w-full rounded-lg place_indent input_outline_css border-black"
-                          placeholder="Enter your first name"
+                          className="h-12 w-full rounded-lg place_indent input_outline_css  border-[#74B9FF] border-[2px]"
+                          placeholder="       First name"
                           onChange={changeFunc}
                           value={currentState.fname}
                           autoComplete="new-password"
@@ -419,8 +455,8 @@ const Checkout = () => {
                           type="text"
                           name="lname"
                           id="lnameeee"
-                          className="border h-12 w-full rounded-lg place_indent input_outline_css border-black"
-                          placeholder="Enter your last name"
+                          className="h-12 w-full rounded-lg place_indent input_outline_css  border-[#74B9FF] border-[2px] "
+                          placeholder="       Last name"
                           onChange={changeFunc}
                           autoComplete="new-password"
                           value={currentState.lname}
@@ -442,8 +478,8 @@ const Checkout = () => {
                     type="text"
                     name="address"
                     id="textinputaddress"
-                    className="border h-12 rounded-lg place_indent input_outline_css border-black"
-                    placeholder="Enter your address"
+                    className="h-12 rounded-lg place_indent input_outline_css  border-[#74B9FF] border-[2px] "
+                    placeholder="        Enter your address"
                     autoComplete="new-password"
                     onChange={changeFunc}
                     value={currentState.address}
@@ -460,8 +496,8 @@ const Checkout = () => {
                     type="text"
                     name="landmark"
                     id="textinputlandmark"
-                    className="border h-12 rounded-lg place_indent input_outline_css border-black"
-                    placeholder="Enter your landmark"
+                    className=" h-12 rounded-lg place_indent input_outline_css  border-[#74B9FF] border-[2px] "
+                    placeholder="        Enter your landmark"
                     onChange={changeFunc}
                     autoComplete="new-password"
                     value={currentState.landmark}
@@ -483,8 +519,55 @@ const Checkout = () => {
               </div>
             </div>
           </form>
+
+          <div className="bg-white rounded-[20px] md:p-8 p-3 flex flex-col gap-3">
+            <p className="font-semibold text-xl overflow-hidden">Payment</p>
+            <div className="rounded-[10px]  bg-[#F6F6F6]">
+              <label htmlFor="all">
+                <div className="md:w-[717px] flex items-center h-[50px]">
+                  <div className="w-[95%] mx-auto flex justify-between">
+                    <div className="flex  items-center gap-5">
+                      <img src={payonline} alt="" />
+                      <span className="font-poppins font-[500] text-[15px] leading-[22.5px]">
+                        Pay Online
+                      </span>
+                    </div>
+                    <input
+                      type="radio"
+                      defaultChecked
+                      className="mr-6"
+                      name="paying"
+                      value="online"
+                      id="all"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div className="rounded-[10px]  bg-[#F6F6F6] ">
+              <label htmlFor="al">
+                <div className="md:w-[717px] flex items-center h-[50px]">
+                  <div className="w-[95%] mx-auto flex justify-between">
+                    <div className="flex  items-center gap-5">
+                      <img src={cash} alt="" />
+                      <span className="font-poppins font-[500] text-[15px] leading-[22.5px]">
+                        Pay Cash
+                      </span>
+                    </div>
+                    <input
+                      type="radio"
+                      className="mr-6"
+                      name="paying"
+                      value="offline"
+                      id="al"
+                    />
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
         </div>
-        <div className="relative h-[100vh] top-10 flex justify-center w-[40%]">
+        <div className="md:relative element-causing-scrollbar h-[100vh] top-10 flex justify-center w-full md:w-[40%]">
           <SeparateCartComponent onButtonClick={handleFormSubmit} />
         </div>
       </div>
