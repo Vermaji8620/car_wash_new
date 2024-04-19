@@ -20,13 +20,13 @@ const Checkout = () => {
     fname: "",
     lname: "",
   });
-  console.log(currentState);
+  // console.log(currentState);
   const regex = /^(?=.*[a-zA-Z0-9].{3,})[a-zA-Z0-9 ,]+$/;
   const [buttonSetting, setButtonSetting] = useState({
     indxdate: null,
     valueinButtondate: "",
   });
-  console.log(buttonSetting);
+  // console.log(buttonSetting);
   const monthArray = [
     "Jan",
     "Feb",
@@ -45,7 +45,7 @@ const Checkout = () => {
     indxtime: null,
     valueinButtontime: "",
   });
-  console.log(buttonSettings);
+  // console.log(buttonSettings);
   useEffect(() => {
     setButtonSettings({
       indxtime: null,
@@ -265,7 +265,6 @@ const Checkout = () => {
             <p className="font-semibold text-3xl overflow-hidden">Logged In</p>
             <p className="text-gray-400">Customer | 8620032336</p>
           </div>
-
           <form
             ref={formRef}
             // onSubmit={submitForm}
@@ -277,35 +276,63 @@ const Checkout = () => {
                   Select Date and Time of Service :
                 </div>
               </div>
-              <div className="flex gap-3 flex-wrap">
-                {Array.from({ length: 21 }, (_, i) => {
-                  const dateCalculation = (new Date().getDate() + i) % 32;
+              {/* (new Date().getDate() + i) % 32 */}
+              <div className="flex gap-5 justify-center flex-wrap">
+                {Array.from({ length: 8 }, (_, i) => {
+                  const dateCalculation =
+                    new Date().getMonth() === 0 ||
+                    new Date().getMonth() === 2 ||
+                    new Date().getMonth() === 4 ||
+                    new Date().getMonth() === 6 ||
+                    new Date().getMonth() === 7 ||
+                    new Date().getMonth() === 9 ||
+                    new Date().getMonth() === 11
+                      ? (new Date().getDate() + i) % 32
+                      : new Date().getMonth() !== 1
+                      ? (new Date().getDate() + i) % 31
+                      : new Date().getFullYear() % 4 === 0
+                      ? (new Date().getDate() + i) % 30
+                      : (new Date().getDate() + i) % 29;
                   if (dateCalculation === 0) return null;
                   return (
-                    <div key={i}>
+                    <div key={i} className="">
                       <button
                         type="button"
                         onClick={(event) => {
                           setButtonSetting({
                             indxdate: i,
-                            valueinButtondate: event.target.innerText,
+                            valueinButtondate:
+                              new Date().getDate() === dateCalculation
+                                ? `${new Date().getDate()}\n${
+                                    monthArray[new Date().getMonth()]
+                                  }`
+                                : new Date().getDate() + 1 === dateCalculation
+                                ? `${new Date().getDate() + 1}\n${
+                                    monthArray[new Date().getMonth()]
+                                  }`
+                                : event.target.innerText,
                           });
                         }}
                         className={`border ${
                           i === buttonSetting.indxdate
                             ? "bg-[#60A5FA] text-white border-none"
                             : "bg-white"
-                        } border-black selectedhover rounded-lg w-16 h-16 gap-10`}
+                        } border-black selectedhover rounded-lg w-fit p-4 overflow-hidden h-16 gap-10`}
                       >
-                        {dateCalculation}
+                        {new Date().getDate() === dateCalculation
+                          ? "today"
+                          : new Date().getDate() + 1 === dateCalculation
+                          ? "tomorrow"
+                          : dateCalculation}
                         <br />
-                        {
-                          monthArray[
-                            dateCalculation < new Date().getDate()
-                              ? new Date().getMonth() + 1
-                              : new Date().getMonth()
-                          ]
-                        }
+                        {new Date().getDate() === dateCalculation ||
+                        new Date().getDate() + 1 === dateCalculation
+                          ? ""
+                          : monthArray[
+                              dateCalculation < new Date().getDate()
+                                ? new Date().getMonth() + 1
+                                : new Date().getMonth()
+                            ]}
                       </button>
                     </div>
                   );
