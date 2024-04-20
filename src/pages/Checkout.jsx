@@ -78,66 +78,94 @@ const Checkout = () => {
     landmark: "",
   });
 
-  // const paymentHandler = async () => {
-  //   console.log("handler defined again");
-  //   const paymentOptions = {
-  //     amount: 500,
-  //     currency: "INR",
-  //     receipt: "qwasqi1",
-  //   };
-  //   const data = await fetch("http://localhost:4000/payment/order", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(paymentOptions),
-  //   });
-  //   const res = await data.json();
-  //   let options = {
-  //     key: import.meta.VITE_RAZORPAY_KEY_ID,
-  //     amount: "50000",
-  //     currency: "INR",
-  //     name: "Wash Car",
-  //     description: "Test Transaction",
-  //     order_id: res.id,
-  //     handler: async function (response) {
-  //       const body = { ...response };
-  //       const validateRes = await fetch("http://localhost:4000/payment/check", {
-  //         method: "POST",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: JSON.stringify(body),
-  //       });
-  //       const ress = await validateRes.json();
-  //       console.log(ress);
-  //     },
-  //     prefill: {
-  //       name: "Car Wash",
-  //       description: "Car Washing service",
-  //       contact: "6564566515",
-  //     },
-  //     notes: {
-  //       address: "Razorpay Corporate Office",
-  //     },
-  //     theme: {
-  //       color: "#3399cc",
-  //     },
-  //   };
-  //   var rzp1 = new window.Razorpay(options);
-  //   rzp1.on("payment.failed", function (response) {
-  //     alert(response.error.code);
-  //     alert(response.error.description);
-  //     alert(response.error.source);
-  //     alert(response.error.step);
-  //     alert(response.error.reason);
-  //     alert(response.error.metadata.order_id);
-  //     alert(response.error.metadata.payment_id);
-  //   });
-  //   rzp1.open();
-  // };
+  const loadScript = (src) => {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  };
 
-  const submitForm = (event) => {
+  const paymentHandler = async (checkedValue) => {
+    if (checkedValue === "offline") {
+      navigate("/thankyou");
+      return;
+    }
+
+    const paymentOptions = {
+      amount:
+        (selector.grandtotal + Math.round(selector.grandtotal * 0.18)) * 100,
+      currency: "INR",
+      receipt: "qwasqi1",
+    };
+    const data = await fetch("http://localhost:4000/payment/order", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(paymentOptions),
+    });
+    const res = await data.json();
+    let options = {
+      key: import.meta.VITE_RAZORPAY_KEY_ID,
+      amount: "50000",
+      currency: "INR",
+      name: "Wash Market",
+      description: "Test Transaction",
+      order_id: res.id,
+      handler: async function (response) {
+        const body = { ...response };
+        const validateRes = await fetch("http://localhost:4000/payment/check", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(body),
+        });
+        const ress = await validateRes.json();
+        console.log(ress);
+      },
+      prefill: {
+        name: "Wash Market",
+        description: "Car Washing service",
+        contact: "6564566515",
+      },
+      notes: {
+        address: "Razorpay Corporate Office",
+      },
+      theme: {
+        color: "#3399cc",
+      },
+    };
+    const ress = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+
+    if (!ress) {
+      alert("Razorpay SDK failed to load. Are you online?");
+      return;
+    }
+    var rzp1 = new window.Razorpay(options);
+    rzp1.on("payment.failed", function (response) {
+      alert(response.error.code);
+      alert(response.error.description);
+      alert(response.error.source);
+      alert(response.error.step);
+      alert(response.error.reason);
+      alert(response.error.metadata.order_id);
+      alert(response.error.metadata.payment_id);
+    });
+    rzp1.open();
+  };
+
+  const [checkedValue, setCheckedValue] = useState("online");
+  const submitForm = async (event) => {
     event.preventDefault();
     let fromDatavariable = {
       address: currentState.address,
@@ -146,6 +174,7 @@ const Checkout = () => {
       landmark: currentState.landmark,
       day_and_date: buttonSetting.valueinButtondate,
       time: buttonSettings.valueinButtontime,
+      checkedValue,
     };
 
     if (fromDatavariable.day_and_date === "") {
@@ -197,7 +226,7 @@ const Checkout = () => {
     }-${new Date().getFullYear()}`;
 
     console.log(fromDatavariable);
-    // paymentHandler();
+    await paymentHandler(fromDatavariable.checkedValue);
   };
 
   const fetchLocationFunc = () => {
@@ -536,6 +565,7 @@ const Checkout = () => {
                     <input
                       type="radio"
                       defaultChecked
+                      onClick={() => setCheckedValue("online")}
                       className="mr-6"
                       name="paying"
                       value="online"
@@ -557,6 +587,7 @@ const Checkout = () => {
                     </div>
                     <input
                       type="radio"
+                      onClick={() => setCheckedValue("offline")}
                       className="mr-6"
                       name="paying"
                       value="offline"

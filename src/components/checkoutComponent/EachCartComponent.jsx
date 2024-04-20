@@ -22,10 +22,10 @@ const EachCartSection = ({ title, price, strikePrice, index }) => {
   return (
     <div className="flex justify-between w-full border p-3 border-gray-300">
       <p>{title}</p>
-      <p className="flex items-center w-[40%] justify-between">
-        <s className="flex items-center text-gray-400">
+      <div className="flex items-center w-[40%] justify-between">
+        <strike className="flex items-center text-gray-400">
           <FaRupeeSign /> {strikePrice}
-        </s>
+        </strike>
         <p className="flex items-center">
           <FaRupeeSign /> {price}
         </p>
@@ -37,13 +37,13 @@ const EachCartSection = ({ title, price, strikePrice, index }) => {
             />
           </div>
         )}
-      </p>
+      </div>
     </div>
   );
 };
 
 EachCartSection.propTypes = {
-  desc: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   strikePrice: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,

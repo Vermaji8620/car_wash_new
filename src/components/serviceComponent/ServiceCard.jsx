@@ -285,7 +285,7 @@ const ServiceCard = () => {
 
             <div className="w-[61px] h-[27px]">
               <p className="font-poppins font-[600] leading-[27px]">
-                {/* ₹ {selector.grandtotal} */}₹ {selector.grandtotal}
+                ₹ {selector.grandtotal}
               </p>
             </div>
           </div>
