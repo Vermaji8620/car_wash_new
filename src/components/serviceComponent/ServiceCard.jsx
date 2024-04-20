@@ -7,20 +7,34 @@ import tata from "../../assets/tata.png";
 import search from "../../assets/search.png";
 import carontop from "../../assets/carontop.png";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { removeEntry, removetotal } from "../../redux/ReduxSlice";
 
 const ServiceCard = () => {
+  const navigate = useNavigate();
+  const path = location.pathname;
   const [error, setError] = useState("");
   useEffect(() => {
     setTimeout(() => {
       setError("");
     }, 2000);
   }, [error]);
+  const selector = useSelector((state) => state.counter);
+  const dispatch = useDispatch();
+  const remove = (index, price) => {
+    dispatch(removeEntry({ index }));
+    dispatch(removetotal(price));
+  };
   return (
     <div className="sm:sticky relative sm:top-10 top-[36rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-40 sm:inline-block hidden items-center w-full gap-5 mx-auto p-4 sm:w-[500px] sm:ml-[980px]">
       {/* hidden ya visible hoga according to lcs , uske liye ek red dot point laga diye hai */}
 
+      {/* ****************************************(DISCARDED AS OF NOW)************ */}
       {/* display this  */}
-      {/* <div className="flex flex-col gap-5">
+      {/* <div
+        className={`${path === "/checkout" ? "flex" : "hidden"} flex-col gap-5`}
+      >
         <div className="translate-x-7 pt-2 w-[238px] h-[35px]">
           <p className="font-poppins font-[600] text-[23px] leading-[34.5px]">
             Select Manufacturer
@@ -174,9 +188,13 @@ const ServiceCard = () => {
           </div>
         </div>
       </div> */}
-
+      {/* ****************************************************** */}
       {/* or display this */}
-      <div className="flex flex-col w-full gap-3">
+      <div
+        className={`${
+          path === "/services" ? "flex" : "hidden"
+        } flex-col w-full gap-3`}
+      >
         <div className="flex justify-center">
           <div className="w-[105px] h-[102px] bg-[#74B9FF] rounded-full">
             <img
@@ -208,44 +226,54 @@ const ServiceCard = () => {
           </div>
         </div>
 
-        <div className="w-[437px] h-[84px] rounded-[10px] border-[1px] mx-auto flex justify-between border-black">
-          <div className="w-[90%] mx-auto flex justify-between">
-            <div className="flex flex-col justify-center">
-              <div className="w-[132px] h-[23px]">
-                <p className="font-poppins font-[600] text-[15px] leading-[22.5px]">
-                  Standard Service
-                </p>
-              </div>
-              <div className="w-[87px] h-[23px]">
-                <p className="font-poppins font-[400] text-[15px] leading-[22.5px]">
-                  Mobil 5W30
-                </p>
+        {selector.items.length > 0 &&
+          selector.items.map((item, index) => (
+            <div key={index}>
+              <div className="w-[437px] h-[84px] rounded-[10px] border-[1px] mx-auto flex justify-between border-black">
+                <div className="w-[90%] mx-auto flex justify-between">
+                  <div className="flex flex-col justify-center">
+                    <div className="h-[23px]">
+                      <p className="font-poppins font-[600] text-[15px] leading-[22.5px]">
+                        {item.title}
+                      </p>
+                    </div>
+                    <div className="w-[87px] h-[23px]">
+                      <p className="font-poppins font-[400] text-[15px] leading-[22.5px]">
+                        Mobil 5W30
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-[52px] h-[23px]">
+                      <strike className="text-[#ADADAD] font-poppins font-[600] text-[15px] leading-[22.5px]">
+                        ₹ {item.strikePrice}
+                      </strike>
+                    </div>
+                    <div className="w-[52px] h-[23px]">
+                      <p className="font-poppins font-[600] text-[15px] leading-[22.5px]">
+                        ₹ {item.price}
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => {
+                        remove(index, item.price);
+                      }}
+                      className="w-[32px] flex items-center justify-center h-[29px] rounded-[10px] bg-[#FFDFDF] border-[1px] border-[#FF7474]"
+                    >
+                      <img src={dlte} alt="" />
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="w-[52px] h-[23px]">
-                <strike className="text-[#ADADAD] font-poppins font-[600] text-[15px] leading-[22.5px]">
-                  ₹ 4699
-                </strike>
-              </div>
-              <div className="w-[52px] h-[23px]">
-                <p className="font-poppins font-[600] text-[15px] leading-[22.5px]">
-                  ₹ 4699
-                </p>
-              </div>
-              <div className="w-[32px] flex items-center justify-center h-[29px] rounded-[10px] bg-[#FFDFDF] border-[1px] border-[#FF7474]">
-                <img src={dlte} alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+          ))}
 
         <div className="w-[437px] flex justify-between">
           <div className="w-[90%] flex justify-between items-center mx-auto">
             <div>
               <div className="w-[154px] h-[26px]">
                 <p className="font-poppins font-[600] text-[17px] leading-[25.5px]">
-                  Subtotal (1 Items)
+                  Subtotal ({selector.items.length} Items)
                 </p>
               </div>
               <div className="w-[193px] h-[23px]">
@@ -256,8 +284,8 @@ const ServiceCard = () => {
             </div>
 
             <div className="w-[61px] h-[27px]">
-              <p className="font-poppins font-[600] text-[18px] leading-[27px]">
-                ₹ 3499
+              <p className="font-poppins font-[600] leading-[27px]">
+                {/* ₹ {selector.grandtotal} */}₹ {selector.grandtotal}
               </p>
             </div>
           </div>
@@ -277,11 +305,14 @@ const ServiceCard = () => {
           </div>
         </div>
 
-        <div className="w-[447px] flex items-center text-white mx-auto rounded-[10px] h-[56px] bg-[#74B9FF] ">
+        <button
+          onClick={() => navigate("/checkout")}
+          className="w-[447px] flex items-center text-white mx-auto rounded-[10px] h-[56px] bg-[#74B9FF] "
+        >
           <div className="w-[90%] items-center mx-auto flex justify-between">
             <div className="w-[58px] h-[26px] ">
               <p className="font-poppins font-[600] text-[15px] leading-[25.5px]">
-                ₹ 3499
+                ₹ {selector.grandtotal}
               </p>
             </div>
 
@@ -291,7 +322,7 @@ const ServiceCard = () => {
               </p>
             </div>
           </div>
-        </div>
+        </button>
       </div>
     </div>
   );

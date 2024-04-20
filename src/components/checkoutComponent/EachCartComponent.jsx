@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 
 // import { useSelector } from "react-redux";
 
-const EachCartSection = ({ desc, price, strikePrice, index }) => {
+const EachCartSection = ({ title, price, strikePrice, index }) => {
   // const selector = useSelector((state) => state.counter);
   const location = useLocation();
   const pathSegments = location.pathname.split("/");
@@ -21,7 +21,7 @@ const EachCartSection = ({ desc, price, strikePrice, index }) => {
 
   return (
     <div className="flex justify-between w-full border p-3 border-gray-300">
-      <p>{desc}</p>
+      <p>{title}</p>
       <p className="flex items-center w-[40%] justify-between">
         <s className="flex items-center text-gray-400">
           <FaRupeeSign /> {strikePrice}

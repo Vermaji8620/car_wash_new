@@ -2,18 +2,18 @@ import { useState, useRef, useEffect } from "react";
 import payonline from "../assets/payonline.png";
 import cash from "../assets/cash.png";
 // import SeparateCartComponent from "../components/SeparateCartComponent";
-// import { useNavigate } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { TbCurrentLocation } from "react-icons/tb";
 import SeparateCartComponent from "../components/checkoutComponent/SeparateCartComponent";
 
 const Checkout = () => {
-  // const navigate = useNavigate();
-  // const selector = useSelector((state) => state.counter);
+  const navigate = useNavigate();
+  const selector = useSelector((state) => state.counter);
 
-  // useEffect(() => {
-  //   if (selector.items.length === 0) navigate("/services");
-  // }, [selector.items, navigate]);
+  useEffect(() => {
+    if (selector.items.length === 0) navigate("/services");
+  }, [selector.items, navigate]);
 
   const formRef = useRef(null);
   const [currentState, setCurrentState] = useState({
@@ -22,7 +22,7 @@ const Checkout = () => {
     fname: "",
     lname: "",
   });
-  // console.log(currentState);
+  console.log(currentState);
   const regex = /^(?=.*[a-zA-Z0-9].{3,})[a-zA-Z0-9 ,]+$/;
   const [buttonSetting, setButtonSetting] = useState({
     indxdate: null,

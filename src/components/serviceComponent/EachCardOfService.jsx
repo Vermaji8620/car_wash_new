@@ -1,23 +1,42 @@
-import personcarwash from "../../assets/personcarwash.png";
+import { useDispatch, useSelector } from "react-redux";
 import cartick from "../../assets/cartick.png";
 import clockicon from "../../assets/clockicon.png";
+import { TiTick } from "react-icons/ti";
+import { addentry, addtotal } from "../../redux/ReduxSlice";
 
-const EachCardOfService = () => {
+const EachCardOfService = ({
+  index,
+  imgLink,
+  title,
+  desc1,
+  desc2,
+  strikePrice,
+  price,
+}) => {
+  const dispatch = useDispatch();
+  const selector = useSelector((state) => state.counter);
+  const addfunc = () => {
+    strikePrice = Number(strikePrice);
+    price = Number(price);
+    dispatch(addentry({ strikePrice, price, index, title }));
+    dispatch(addtotal(price));
+  };
   return (
     <div className="shadow-[2xl sm:-mb-0 relative w-full">
       <div className="flex justify-center text-white items-center absolute w-[173px] h-[28px] sm:h-[43px] bg-[#309534] rounded-tl-[10px] rounded-br-[10px] sm:top-10 top-16 translate-y-1">
         RECOMMENDED
       </div>
+
       <div className="w-full bg-white sm:h-[325px] mt-16 sm:pt-10 pt-8 shadow-lg p-4 flex flex-col justify-around sm:rounded-[20px] rounded-[5px]">
         <div className="flex sm:flex-row overflow-hidden flex-row-reverse justify-between items-center">
           <div className="sm:w-[140px] rounded-2xl sm:h-[145px] translate-y-2 w-[40%] sm:-translate-y-5">
-            <img src={personcarwash} alt="" />
+            <img src={imgLink} alt="" />
           </div>
           <div className="flex flex-col sm:w-[80%] w-[60%] sm:gap-4 gap-4">
             <div className="flex justify-between">
-              <div className="sm:w-[175px] sm:h-[30px]">
+              <div className="sm:h-[30px]">
                 <div className="font-poppins font-[600] sm:text-[20px] text-[16px] sm:leading-[30px]">
-                  Standard Service
+                  {title}
                 </div>
               </div>
               <div className="w-[173px] h-[37px] rounded-[10px] sm:flex hidden items-center bg-[#EBF5FF] justify-center">
@@ -34,12 +53,12 @@ const EachCardOfService = () => {
             <div className="">
               <div className="w-[240px] hidden sm:inline-block h-[23px]">
                 <div className="font-poppins font-[400] sm:text-[15px] sm:leading-[22.5px]">
-                  1000 Kms or 1 Month Warranty
+                  {desc1}
                 </div>
               </div>
               <div className="sm:w-[369px] overflow-hidden sm:h-[23px]">
                 <div className="font-poppins hidden sm:inline-block font-[400] sm:text-[15px] sm:leading-[22.5px]">
-                  Every 10,000 Kms or 6 Months (Recommended)
+                  {desc2}
                 </div>
                 <div className=" sm:hidden gap-2 text-[12px] flex items-center">
                   <div className="w-[4px] h-[4px] rounded-full bg-black"></div>
@@ -139,12 +158,12 @@ const EachCardOfService = () => {
           <div className="flex gap-3 items-center">
             <div className="w-[52px] h-[27px]">
               <strike className="font-poppins text-[#ACACAC] font-[600] sm:text-[18px] text-[14px] leading-[27px]">
-                ₹ 5141
+                ₹ {strikePrice}
               </strike>
             </div>
             <div className="sm:w-[100px] sm:h-[30px]">
               <div className="font-poppins font-[600] sm:text-[20px] text-[18px] leading-[30px]">
-                ₹ 3599
+                ₹ {price}
               </div>
             </div>
           </div>
@@ -155,11 +174,31 @@ const EachCardOfService = () => {
                 alt=""
                 className="hidden text-green-500 sm:inline-block w-[18px] h-[18px]"
               /> */}
-              <div className="w-[110px] h-[23px]">
+              <button
+                onClick={() => addfunc()}
+                className={` ${
+                  selector.items.some((item) => item.index === index)
+                    ? "hidden"
+                    : "inline-block"
+                } w-[110px] h-[23px]`}
+              >
                 <div className="font-poppins font-[700] text-[#74B9FF] sm:text-[15px]  text-[15px] sm:translate-x-0 leading-[22.5px] text-center">
                   ADD
                 </div>
-              </div>
+              </button>
+              <button
+                disabled
+                className={` ${
+                  selector.items.some((item) => item.index === index)
+                    ? "flex"
+                    : "hidden"
+                } justify-around cursor-not-allowed items-center w-[110px] h-[23px]`}
+              >
+                <TiTick className="sm:text-2xl text-xl" />
+                <div className="font-poppins font-[700] text-[#74B9FF] sm:text-[15px]  text-[12px] sm:translate-x-0 leading-[22.5px] text-center">
+                  ADDED
+                </div>
+              </button>
             </div>
           </div>
         </div>

@@ -57,7 +57,7 @@ const SeparateCartComponent = ({ onButtonClick }) => {
             <div key={index}>
               <EachCartSection
                 index={index}
-                desc={element.description}
+                title={element.title}
                 price={element.price}
                 strikePrice={element.strikePrice}
               />
