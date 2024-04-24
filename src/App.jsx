@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import Thankyou from "./pages/Thankyou";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/thankyou" element={<Thankyou />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/login" element={<Login />} />
           <Route path="*" element={<div>Page Not Found</div>} />
         </Routes>
       </BrowserRouter>

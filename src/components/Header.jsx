@@ -4,15 +4,22 @@ import frame from "../assets/Frame.png";
 import newlogo from "../assets/newlogo.png";
 
 const Header = () => {
+  const path = location.pathname;
   return (
     <div className="flex justify-between sm:p-2 sm:-mb-3 -mb-16 sm:-mt-5 relative overflow-hidden">
       {/* from here is desktop view */}
 
-      <div className="sm:flex w-[120px] hidden sm:translate-y-3 sm:translate-x-10">
+      <div
+        className={`sm:${
+          path === "/login" ? "hidden" : "flex"
+        } w-[120px] hidden sm:translate-y-3 sm:translate-x-10`}
+      >
         <img src={newlogo} alt="" />
       </div>
       <div
-        className={`sm:flex hidden absolute z-40 justify-around right-0 items-center w-[857px] h-[76px] overflow-hidden bg-[#74B9FF] rounded-[50px] mt-6 mr-14 ${
+        className={`sm:${
+          path === "/login" ? "hidden" : "flex"
+        } hidden absolute z-40 justify-around right-0 items-center w-[857px] h-[76px] overflow-hidden bg-[#74B9FF] rounded-[50px] mt-6 mr-14 ${
           location.pathname === "/checkout" ? "sm:hidden" : "sm:inline-block"
         }`}
       >
@@ -81,7 +88,11 @@ const Header = () => {
         </div>
       </div> */}
 
-      <div className="w-[100%] sm:hidden justify-between flex h-[65px] mb-20">
+      <div
+        className={`w-[100%] sm:hidden justify-between ${
+          path === "/login" ? "hidden" : "flex"
+        } h-[65px] mb-20`}
+      >
         <div className="flex justify-between">
           <IoMenu className="text-[50px] mt-3 text-[#74B9FF]" />
           <Link to="/">
