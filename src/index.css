@@ -11,6 +11,19 @@
   overflow-x: hidden;
 }
 
+.slide {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slide.show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
 .white_shade {
   height: 10vh;
   background: url("./assets/shade_on_header.png");

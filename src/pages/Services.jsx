@@ -119,12 +119,6 @@ const Services = () => {
             </p>
           </div>
           <div className="overflow-auto flex flex-col w-full">
-            {/* {Array.from({ length: 10 }, (_, indx) => (
-              <div key={indx}>
-                <EachCardOfService />
-              </div>
-            ))} */}
-
             {arrr.map((item, index) => (
               <div key={index}>
                 <EachCardOfService

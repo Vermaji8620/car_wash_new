@@ -167,38 +167,39 @@ const EachCardOfService = ({
               </div>
             </div>
           </div>
-          <div className="sm:w-[162px] sm:relative border-[2px] border-[#74B9FF] sm:bg-[#E7FFE8] bg-white absolute sm:bottom-0 bottom-8 sm:left-0 left-56 sm:h-[46px] p-1 sm:rounded-[10px] rounded-[5px] sm:translate-x-0 translate-x-6 flex items-center w-[70px]">
-            <div className=" h-[23px] flex items-center justify-center gap-5 mx-auto">
-              {/* <img
-                src={cartick}
-                alt=""
-                className="hidden text-green-500 sm:inline-block w-[18px] h-[18px]"
-              /> */}
-              <button
-                onClick={() => addfunc()}
-                className={` ${
-                  selector.items.some((item) => item.index === index)
-                    ? "hidden"
-                    : "inline-block"
-                } w-[110px] h-[23px]`}
-              >
-                <div className="font-poppins font-[700] text-[#74B9FF] sm:text-[15px]  text-[15px] sm:translate-x-0 leading-[22.5px] text-center">
-                  ADD
-                </div>
-              </button>
-              <button
-                disabled
-                className={` ${
-                  selector.items.some((item) => item.index === index)
-                    ? "flex"
-                    : "hidden"
-                } justify-around cursor-not-allowed items-center w-[110px] h-[23px]`}
-              >
-                <TiTick className="sm:text-2xl text-xl" />
-                <div className="font-poppins font-[700] text-[#74B9FF] sm:text-[15px]  text-[12px] sm:translate-x-0 leading-[22.5px] text-center">
-                  ADDED
-                </div>
-              </button>
+
+          <div className="sm:w-[162px] sm:relative absolute sm:bottom-0 bottom-7 sm:left-0 left-52 sm:h-[46px] sm:rounded-[10px] rounded-[10px] sm:translate-x-0 translate-x-6 flex items-center w-[90px] h-[40px] border-[2px] border-[#74B9FF]">
+            <div
+              className={`rounded-md w-full ${
+                selector.items.some((item) => item.index === index)
+                  ? "bg-[#74B9FF] text-white"
+                  : "text-[#74B9FF] bg-white"
+              }   h-full flex items-center justify-center gap-5 mx-auto`}
+            >
+              <div onClick={() => addfunc()}>
+                <button className="font-poppins font-[700] sm:text-[15px]  text-[15px] sm:translate-x-0 leading-[22.5px] text-center">
+                  <button
+                    className={` ${
+                      selector.items.some((item) => item.index === index)
+                        ? "hidden"
+                        : "inline-block"
+                    }`}
+                  >
+                    ADD
+                  </button>
+                  <button
+                    disabled
+                    className={`font-poppins pr-2 font-[700] mt-2 sm:text-[15px] items-center flex text-[12px] sm:translate-x-0 leading-[22.5px] text-center  ${
+                      selector.items.some((item) => item.index === index)
+                        ? "inline-block"
+                        : "hidden"
+                    } flex`}
+                  >
+                    <TiTick className=" text-green-600 sm:text-2xl text-xl" />
+                    ADDED
+                  </button>
+                </button>
+              </div>
             </div>
           </div>
         </div>

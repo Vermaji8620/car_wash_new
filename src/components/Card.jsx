@@ -23,7 +23,7 @@ const Card = () => {
         }
         console.log(phno);
       }}
-      className="sm:sticky relative sm:top-56 top-[54rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[500px] sm:mb-0 mb-40 flex items-center w-full mx-auto p-4 sm:pt-8 sm:w-[500px] sm:ml-[980px] "
+      className="sm:sticky relative sm:top-56 top-[54rem] z-20 bg-white rounded-[20px] border-[1px] border-[#74B9FF] sm:-mt-[690px] -mt-[520px] sm:mb-0 mb-48 flex items-center w-full mx-auto p-4 sm:pt-8 sm:w-[500px] sm:ml-[980px] "
     >
       <div className="mx-auto gap-3 flex flex-col">
         <div className="sm:w-[402px] h-[114px]">
@@ -36,7 +36,7 @@ const Card = () => {
             Get Instant Quotes for Your Car Service
           </p>
         </div> */}
-        <div className="flex sm:-mt-0 -mt-8 sm:w-[400px] items-center rounded-[10px] border-[#000000] border-[1px] sm:h-[67px] h-[55px]">
+        <div className="flex sm:-mt-0 -mt-8 sm:w-[400px] items-center rounded-[10px] border-[#74B9FF] border-[1px] sm:h-[67px] h-[55px]">
           <img src={smallcar} alt="" className="w-[46px] h-[46px]" />
           <select name="" id="" className="border-none flex w-[235px] h-[30px]">
             <option
@@ -47,7 +47,7 @@ const Card = () => {
             </option>
           </select>
         </div>
-        <div className="border-[#000000] items-center pl-4 gap-3 sm:w-[400px] sm:h-[67px] h-[50px] rounded-[10px] flex border-[1px]">
+        <div className="border-[#74B9FF] items-center pl-4 gap-3 sm:w-[400px] sm:h-[67px] h-[50px] rounded-[10px] flex border-[1px]">
           <img src={telephone} alt="" className="w-[30px] h-[30px]" />
           <div className="h-[30px]">
             <p className="font-poppins font-[400] sm:text-[19px] leading-[28.5px] ">

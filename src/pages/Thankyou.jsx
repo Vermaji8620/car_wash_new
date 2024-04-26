@@ -1,11 +1,11 @@
 import people from "../assets/people.png";
-import allsocials from "../assets/allsocials.png";
 import NinethHome from "../components/NinethHomeSec";
+import { Link } from "react-router-dom";
 import TenthHomeSec from "../components/TenthHomeSec";
 
 const Thankyou = () => {
   return (
-    <div className="border-[2px] border-red-300">
+    <div className="">
       <div className="flex md:mt-32 items-center justify-center">
         <img src={people} className="w-[563px] h-[393px]" alt="" />
       </div>
@@ -27,9 +27,13 @@ const Thankyou = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center">
-        <img src={allsocials} className="w-[322px] h-[242px]" alt="" />
-      </div>
+      <Link
+        to={"/"}
+        className="bg-[#74B9FF] md:w-[30%] w-[70%] mx-auto p-3 rounded-md mt-10 text-white cursor-pointer flex justify-center"
+      >
+        {/* <img src={allsocials} className="w-[322px] h-[242px]" alt="" /> */}
+        <button>Back to HomePage</button>
+      </Link>
       <NinethHome />
       <TenthHomeSec />
     </div>

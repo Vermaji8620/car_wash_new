@@ -1,6 +1,6 @@
-import bg_logo from "../assets/logo_bg.png";
 import call from "../assets/call.png";
 import location from "../assets/location.png";
+import newlogo from "../assets/newlogo.png";
 import mail from "../assets/mail.png";
 import time from "../assets/time.png";
 import gplay from "../assets/gplay.png";
@@ -9,8 +9,8 @@ import applay from "../assets/appplay.png";
 const TenthHomeSec = () => {
   return (
     <div className="tenth_section z-50 bg-[#1A1A1A] items-center text-white pb-16 justify-around sm:gap-8 flex flex-col pl-5">
-      <img src={bg_logo} className="w-[232px] h-[116px]" alt="" />
-      <div className="sm:w-[978px] overflow-hidden sm:h-[87px] w-[90%] sm:-ml-0 -ml-5 text-center">
+      <img src={newlogo} className="w-[232px]" alt="" />
+      <div className="sm:w-[978px] overflow-hidden sm:h-[87px] w-[90%] sm:-ml-40 -ml-5 text-center">
         <p className="font-[400] sm:text-[19px] text-[10px] sm:text-start text-center sm:w-[60%] leading-[18px] sm:leading-[29px]">
           Lorem Ipsum is simply dummy text of the printingand typesetting
           industry. Lorem Ipsum has been the industrys standard dummy Lorem
@@ -18,7 +18,7 @@ const TenthHomeSec = () => {
           <span className="sm:inline-block hidden"> dummy</span>
         </p>
       </div>
-      <div className="hidden sm:flex flex-row items-center w-[80%] justify-end -mt-28 sm:pt-0">
+      <div className="hidden sm:flex flex-row items-center w-[80%] justify-end -mt-28 sm:pt-0 sm:mr-20">
         <img src={gplay} alt="" />
         <img src={applay} className="w-[194px] sm:h-[61px]" alt="" />
       </div>

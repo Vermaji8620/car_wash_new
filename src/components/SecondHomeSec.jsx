@@ -44,12 +44,12 @@ const SecondHomeSec = () => {
           </p>
           <p className="flex items-center flex-col gap-1 flex-none">Rating</p>
         </div>
-        <div className="sm:w-[85%] sm:gap-3 gap-1 overflow-hidden flex">
-          <div className="sm:w-[46px] w-[96px] relative sm:top-4">
+        <div className="sm:w-[85%] sm:gap-3 gap-1 flex">
+          <div className=" w-[96px] relative sm:top-4">
             <img src={Rect} alt="" className="sm:h-full h-[70px]" />
           </div>
           <div className="flex sm:mt-10 -mt-1 items-center">
-            <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-hidden leading-[28px]">
+            <div className="w-[2014px] sm:h-[50px] font-[600] font-poppins sm:text-[40px] text-[25px] overflow-y-hidden leading-[28px]">
               Car Services available in Surat
             </div>
           </div>
@@ -63,10 +63,9 @@ const SecondHomeSec = () => {
                 Pressure Car Wash
               </p>
             </div>
-            <div className="sm:shadow-lg  overflow-hidden relative sm:m-4 sm:w-[180px] sm:h-[180px] h-full flex flex-col justify-end rounded-[10px]">
+            <div className="sm:shadow-lg overflow-y-hidden relative sm:m-4 sm:w-[180px] sm:h-[180px] h-full flex flex-col justify-end rounded-[10px]">
               <img
                 src={grp6}
-                className="relative top-10 rotate-[-55deg] right-0"
                 alt=""
               />
               <img
@@ -74,12 +73,12 @@ const SecondHomeSec = () => {
                 className="absolute top-4 rotate-[28.04deg] sm:left-16"
                 alt=""
               />
-              <p className="text-center font-poppins font-[700] sm:text-[12px] text-[7px] leading-[18px] ">
+              <p className="text-center font-poppins font-[700] sm:text-[12px] text-[10px] leading-[18px] ">
                 UnderBody
               </p>
             </div>
             <div className="sm:shadow-lg  relative sm:m-4 sm:w-[180px] sm:h-[180px] h-full flex flex-col justify-end rounded-[10px]">
-              <img src={whitecar} className="relative top-1" alt="" />
+              <img src={whitecar} alt="" />
               <p className="text-center font-poppins font-[700] sm:text-[12px] text-[9px] sm:leading-[18px] ">
                 Waterless Cleaning
               </p>
@@ -95,7 +94,6 @@ const SecondHomeSec = () => {
               <img
                 src={grp1}
                 alt=""
-                className="relative sm:top-8 top-16 right-8"
               />
               <p className="text-center font-poppins font-[700] sm:text-[12px] text-[10px] leading-[18px]  overflow-hidden mb-4">
                 Car Deep Clean
@@ -109,7 +107,6 @@ const SecondHomeSec = () => {
               />
               <img
                 src={grp1}
-                className="relative right-3 sm:top-8 top-24 sm:bottom-10"
                 alt=""
               />
               <p className="text-center font-poppins font-[700] text-[10px] sm:text-[12px] leading-[18px] overflow-hidden">
@@ -124,7 +121,6 @@ const SecondHomeSec = () => {
               />
               <img
                 src={grp1}
-                className="relative right-3 sm:top-8 top-24 sm:bottom-10"
                 alt=""
               />
               <p className="text-center font-poppins font-[700] text-[10px] sm:text-[12px] leading-[18px] overflow-hidden">

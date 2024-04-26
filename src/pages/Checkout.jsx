@@ -294,9 +294,7 @@ const Checkout = () => {
       <div className="md:flex justify-between w-[95%] mx-auto md:pt-10">
         <div className="p-3 md:w-[55%] w-full gap-10 flex flex-col">
           <div className="bg-white rounded-[20px] md:p-8 p-3 flex flex-col md:gap-3 gap-1">
-            <p className="font-semibold md:text-3xl text-xl overflow-hidden">
-              Logged In
-            </p>
+            <p className="font-semibold md:text-3xl p-1 text-xl">Logged In</p>
             <p className="text-gray-400">Customer | 8620032336</p>
           </div>
 
@@ -313,8 +311,8 @@ const Checkout = () => {
               </div>
               {/* (new Date().getDate() + i) % 32 */}
               <div
-                className="flex md:gap-5 md:pr-0 gap-5 md:pl-[510px] w-full pl-[617px] element-causing-scrollbar 
-              justify-center flex-nowrap overflow-x-auto"
+                className="flex md:gap-5 md:pr-0 gap-1 md:pl-[430px] pl-[555px]  element-causing-scrollbar 
+              justify-center flex-nowrap overflow-x-auto -ml-24"
               >
                 {Array.from({ length: 8 }, (_, i) => {
                   const dateCalculation =
@@ -333,7 +331,7 @@ const Checkout = () => {
                       : (new Date().getDate() + i) % 29;
                   if (dateCalculation === 0) return null;
                   return (
-                    <div key={i} className=" flex-none">
+                    <div key={i} className="flex-none">
                       <button
                         type="button"
                         onClick={() => {
@@ -369,7 +367,7 @@ const Checkout = () => {
                         } flex rounded-lg items-center h-[45px] md:w-fit overflow-hidden md:h-16`}
                       >
                         <div
-                          className={`bg-[#C1C1C1] flex items-center md:h-full ${
+                          className={`bg-[#C1C1C1] text-white flex items-center md:h-full ${
                             new Date().getDate() === dateCalculation ||
                             new Date().getDate() + 1 === dateCalculation
                               ? "p-0"
@@ -385,9 +383,9 @@ const Checkout = () => {
                         </div>
                         <div className="md:h-full flex items-center p-4">
                           {new Date().getDate() === dateCalculation
-                            ? "today"
+                            ? "Today"
                             : new Date().getDate() + 1 === dateCalculation
-                            ? "tomorrow"
+                            ? "Tomorrow"
                             : dateCalculation}{" "}
                           {new Date().getDate() === dateCalculation ||
                           new Date().getDate() + 1 === dateCalculation

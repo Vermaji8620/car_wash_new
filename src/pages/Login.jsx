@@ -29,7 +29,11 @@ const Login = () => {
       >
         <div className="flex flex-col items-center gap-3 justify-center">
           <div className="">
-            <img className="md:w-[312px] w-[212px] md:h-[316px] h-[216px]" src={newlogo} alt="" />
+            <img
+              className="md:w-[312px] w-[212px] md:h-[316px] h-[216px]"
+              src={newlogo}
+              alt=""
+            />
           </div>
           <div className="md:w-[540px] ">
             <p className="font-[400] md:text-center md:text-[40px] text-center text-[28px]">
@@ -43,7 +47,11 @@ const Login = () => {
           </div>
           <div className="text-red-600">{error}</div>
           <div className="flex md:w-[60%] w-full items-center gap-2 mx-auto">
-            <img src={telephone} alt="" className="md:w-[30px] w-[25px] md:h-[30px]" />
+            <img
+              src={telephone}
+              alt=""
+              className="md:w-[30px] w-[25px] md:h-[30px]"
+            />
             <div className="flex items-center">
               <p className="md:text-[20px] text-gray-700">+91</p>
             </div>
@@ -68,12 +76,12 @@ const Login = () => {
               </p>
             </div>
           </div>
-          <button className="w-[480px] pt-[10px] pl-[16px] pr-[10px] pb-[16px] flex justify-center items-center h-[60px] rounded-[5px] bg-[#74B9FF]">
-            {/* <div className=""> */}
-            <p className="text-white font-poppins font-[500] text-[20px] ">
-              Login
-            </p>
-            {/* </div> */}
+          <button className="sm:w-[400px] sm:h-[58px] h-[50px] rounded-[10px] bg-[#74B9FF] items-center flex w-full justify-center">
+            <div className="w-[235px] sm:h-[30px]">
+              <p className="text-white font-poppins text-[15px] sm:translate-x-0 font-[600] sm:text-[19px] leading-[28.5px]">
+                SEND OTP
+              </p>
+            </div>
           </button>
           <div className="w-[480px] flex items-center justify-center">
             <p>

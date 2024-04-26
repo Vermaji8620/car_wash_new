@@ -229,17 +229,12 @@ const ServiceCard = () => {
         {selector.items.length > 0 &&
           selector.items.map((item, index) => (
             <div key={index}>
-              <div className="w-[437px] h-[84px] rounded-[10px] border-[1px] mx-auto flex justify-between border-black">
+              <div className="w-[437px] h-[84px] rounded-[10px] mx-auto flex justify-between">
                 <div className="w-[90%] mx-auto flex justify-between">
                   <div className="flex flex-col justify-center">
                     <div className="h-[23px]">
                       <p className="font-poppins font-[600] text-[15px] leading-[22.5px]">
                         {item.title}
-                      </p>
-                    </div>
-                    <div className="w-[87px] h-[23px]">
-                      <p className="font-poppins font-[400] text-[15px] leading-[22.5px]">
-                        Mobil 5W30
                       </p>
                     </div>
                   </div>

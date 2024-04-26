@@ -1,9 +1,10 @@
-import allstars from "../assets/allstars.png";
+import starTest from "../assets/startest.png";
 import coma from "../assets/coma.png";
 import bluerect from "../assets/bluerect.png";
 import person from "../assets/person.png";
 import person1 from "../assets/person1.webp";
 // import person2 from "../assets/person2.webp";
+import { CiStar } from "react-icons/ci";
 // import person3 from "../assets/person3.jpeg";
 import backrect from "../assets/backrect.png";
 import Rect from "../assets/Rectangle 192.png";
@@ -102,14 +103,17 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="relative flex-none">
           <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
@@ -132,14 +136,16 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="relative flex-none">
           <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
@@ -162,14 +168,15 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="relative flex-none">
           <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
@@ -192,14 +199,16 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="relative flex-none">
           <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
@@ -222,14 +231,15 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="relative flex-none">
           <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
@@ -252,14 +262,15 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="relative flex-none">
           <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
@@ -282,14 +293,16 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
+
         <div className="relative flex-none">
           <div className="w-[250px] mt-10 bg-[#74B9FF] h-[264px] rounded-[20px]">
             <img
@@ -312,11 +325,12 @@ const SixthHomeSec = () => {
                   text ever since the 1500s”
                 </p>
               </div>
-              <img
-                src={allstars}
-                className="absolute top-[210px] z-30 h-[30px] "
-                alt=""
-              />
+              <div className="flex gap-5 top-5 left-2  relative">
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+                <img className="w-[17px] " src={starTest} alt="" />
+              </div>
             </div>
           </div>
         </div>
