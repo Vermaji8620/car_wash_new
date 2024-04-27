@@ -21,7 +21,8 @@ const Header = () => {
   return (
     <div className="flex flex-col justify-between sm:p-2 sm:-mb-3 -mb-28 sm:-mt-5 relative overflow-hidden">
       {/* from here is desktop view */}
-      <Link to={"/"}
+      <Link
+        to={"/"}
         className={`sm:${
           path === "/login" ? "hidden" : "flex"
         } w-[150px] hidden sm:translate-y-1 sm:translate-x-10`}
@@ -30,7 +31,7 @@ const Header = () => {
       </Link>
       <div
         className={`sm:${
-          path === "/login" ? "hidden" : "flex"
+          path === "/login" || path === "/blog" ? "hidden" : "flex"
         } hidden absolute z-40 justify-around right-0 items-center w-[857px] h-[76px] overflow-hidden bg-[#74B9FF] rounded-[50px] mt-12 mr-14 sm:inline-block`}
       >
         {/* <Link to={"/"}>
@@ -77,17 +78,37 @@ const Header = () => {
       {/* to here is desktop view*/}
 
       {/* below one is for the checkout page */}
-      {/* <div
-        className={`sm:flex hidden absolute z-40 justify-around right-0 items-center w-[857px] h-[76px] overflow-hidden bg-[#74B9FF] rounded-[50px] mt-6 mr-14 ${
-          location.pathname === "/checkout" ? "sm:inline-block" : "sm:hidden"
+      <div
+        className={`sm:flex hidden text-white absolute z-40 justify-around right-0 items-center w-[1160px] h-[76px] overflow-hidden bg-[#74B9FF]  rounded-[50px] mt-12 mr-14 ${
+          location.pathname === "/blog" ? "sm:inline-block" : "sm:hidden"
         }`}
       >
-        <div className="w-[278px] h-[48px] ">
-          <p className="font-poppins font-[600] text-[28px] leading-[48px]">
-            Secure Checkout
+        <div className="w-fit h-fit ">
+          <p className="font-poppins font-[400] text-[20px] leading-[30px]">
+            Home
           </p>
         </div>
-      </div> */}
+        <div className="w-fit h-fit">
+          <p className="font-poppins font-[400] text-[20px] leading-[30px]">
+            Latest Car News
+          </p>
+        </div>
+        <div className="w-fit h-fit">
+          <p className="font-poppins font-[400] text-[20px] leading-[30px]">
+            Featured Articles
+          </p>
+        </div>
+        <div className="w-fit h-fit">
+          <p className="font-poppins font-[400] text-[20px] leading-[30px]">
+            Electric Car News
+          </p>
+        </div>
+        <div className="w-fit h-fit">
+          <p className="font-poppins font-[400] text-[20px] leading-[30px]">
+            WashMarket Youtube
+          </p>
+        </div>
+      </div>
       {/* above one is for the checkout page */}
 
       {/* <div className="flex justify-between w-[100vw] sm:hidden -mb-16 h-[10vh] bg-blue-500">

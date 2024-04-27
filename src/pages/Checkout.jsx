@@ -291,7 +291,7 @@ const Checkout = () => {
 
   return (
     <div className="bg-[#F0F0F0]">
-      <div className="md:flex justify-between w-[95%] mx-auto md:pt-10">
+      <div className="md:flex justify-between element-causing-scrollbar w-[95%] mx-auto md:pt-10">
         <div className="p-3 md:w-[55%] w-full gap-10 flex flex-col">
           <div className="bg-white rounded-[20px] md:p-8 p-3 flex flex-col md:gap-3 gap-1">
             <p className="font-semibold md:text-3xl p-1 text-xl">Logged In</p>
