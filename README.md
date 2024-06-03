@@ -1,8 +1,27 @@
-# React + Vite
+# Ledger Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
+- **HTML**
+- **CSS**
+- **React**
+- **Redux Toolkit**
 
-Currently, two official plugins are available:
+## Key Features
+- Responsive user interface
+- Interactive elements
+- State management with Redux Toolkit
+- Modern frontend development practices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Implementation Details
+- Developed the frontend using HTML and CSS for structure and styling
+- Utilized React for building a dynamic and responsive user interface
+- Implemented state management with Redux Toolkit for efficient handling of application state
+- Ensured responsiveness across various devices and screen sizes
+
+## Project Summary
+This ledger web application is built using modern frontend technologies to provide a responsive and interactive user experience. The application leverages HTML and CSS for the basic structure and styling, while React is used for developing a dynamic user interface. Redux Toolkit is employed to manage the application state efficiently, ensuring smooth and predictable state transitions. The application is designed to be fully responsive, offering an optimal viewing experience across a wide range of devices.
+
+## Screenshots
+<img src="https://drive.google.com/uc?export=view&id=1wSu22eSA0hrQH0aBTzVT2wupld3ztH2b" alt="MasterHead">
+<img src="https://drive.google.com/uc?export=view&id=1YdlqZ0CcZBI7wg99sRafcz1GYcnH6vhU" alt="MasterHead">
+<img src="https://drive.google.com/uc?export=view&id=1gbJFu_nsyp8edbQRYcuJf2r9aP4JQdpQ" alt="MasterHead">
