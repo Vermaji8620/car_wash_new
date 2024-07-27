@@ -23,5 +23,4 @@ This ledger web application is built using modern frontend technologies to provi
 
 ## Screenshots
 <img src="https://drive.google.com/uc?export=view&id=1wSu22eSA0hrQH0aBTzVT2wupld3ztH2b" alt="MasterHead">
-<img src="https://drive.google.com/uc?export=view&id=1YdlqZ0CcZBI7wg99sRafcz1GYcnH6vhU" alt="MasterHead">
 <img src="https://drive.google.com/uc?export=view&id=1gbJFu_nsyp8edbQRYcuJf2r9aP4JQdpQ" alt="MasterHead">
